@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<appSettings>
+		<!-- access these values via the property:
+			System.Configuration.ConfigurationManager.AppSettings[key]
+		-->
+		<add key="IUserLoginView" value="loginUI.dll" />
+		<add key="IAuthRequest" value="authLib.dll" />
+		<add key="IAuthResponse" value="authLib.dll" />
+		<add key="IProfileRequest" value="authLib.dll" />
+		<add key="IProfileResponse" value="authLib.dll" />
+ 	</appSettings>
+</configuration>
