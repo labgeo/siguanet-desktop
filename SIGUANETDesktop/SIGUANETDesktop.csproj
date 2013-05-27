@@ -690,9 +690,6 @@
     <None Include="NetTopologySuiteLicense.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Npgsql1License.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Npgsql2License.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
