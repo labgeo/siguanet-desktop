@@ -1,0 +1,743 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SIGUANETDesktop</RootNamespace>
+    <AssemblyName>SIGUANETDesktop</AssemblyName>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC2C819C-0971-4D47-9289-9842C13DA91A}</ProjectGuid>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <StartArguments>--minserve</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <Optimize>False</Optimize>
+    <DefineConstants>DEBUG;TRACE;FORCE_TESTDB</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <Optimize>True</Optimize>
+    <DefineConstants>TRACE;FORCE_TESTDB</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Security">
+      <HintPath>..\lib\Npgsql\2.0.12.0\Mono.Security.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="NetTopologySuite">
+      <HintPath>..\lib\NetTopologySuite\NetTopologySuite.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\lib\Npgsql\2.0.12.0\Npgsql.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>..\lib\PdfSharp\PdfSharp.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="Thinktecture.Tools.Web.Services.DynamicProxy">
+      <HintPath>..\lib\ThinkTecture\Thinktecture.Tools.Web.Services.DynamicProxy.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Thinktecture.Tools.Web.Services.Extensions.Messages">
+      <HintPath>..\lib\ThinkTecture\Thinktecture.Tools.Web.Services.Extensions.Messages.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\DBColumnInfo.cs" />
+    <Compile Include="DB\DBSchemaInfo.cs" />
+    <Compile Include="DB\DBRelationInfo.cs" />
+    <Compile Include="GUIProfiler.cs" />
+    <Compile Include="GUIRule.cs" />
+    <Compile Include="GUI\controlUploadClient.cs" />
+    <Compile Include="GUI\controlUploadClient.Designer.cs">
+      <DependentUpon>controlUploadClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlPreferenciasLoginService.cs" />
+    <Compile Include="GUI\controlPreferenciasLoginService.Designer.cs">
+      <DependentUpon>controlPreferenciasLoginService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlProfileBrowser.cs" />
+    <Compile Include="GUI\controlProfileBrowser.Designer.cs">
+      <DependentUpon>controlProfileBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlSGDUploadManager.cs" />
+    <Compile Include="GUI\controlSGDUploadManager.Designer.cs">
+      <DependentUpon>controlSGDUploadManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmAboutBox.cs" />
+    <Compile Include="GUI\frmAboutBox.Designer.cs">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmHTTPBasicAuth.cs" />
+    <Compile Include="GUI\frmHTTPBasicAuth.Designer.cs">
+      <DependentUpon>frmHTTPBasicAuth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmPerfilMultiple.cs" />
+    <Compile Include="GUI\frmPerfilMultiple.Designer.cs">
+      <DependentUpon>frmPerfilMultiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSuplantacion.cs" />
+    <Compile Include="GUI\frmSuplantacion.Designer.cs">
+      <DependentUpon>frmSuplantacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmVisorSucesos.cs" />
+    <Compile Include="GUI\frmVisorSucesos.Designer.cs">
+      <DependentUpon>frmVisorSucesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log\AppLog.cs" />
+    <Compile Include="Log\Enums.cs" />
+    <Compile Include="Log\SIGUANETDesktopException.cs" />
+    <Compile Include="GUI\controlAdminTools.cs" />
+    <Compile Include="GUI\controlAdminTools.Designer.cs">
+      <DependentUpon>controlAdminTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlArbolActividades.cs" />
+    <Compile Include="GUI\controlArbolActividades.Designer.cs">
+      <DependentUpon>controlArbolActividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlArbolGruposActividad.cs" />
+    <Compile Include="GUI\controlArbolGruposActividad.Designer.cs">
+      <DependentUpon>controlArbolGruposActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlPreferenciasAuthSearch.cs" />
+    <Compile Include="GUI\controlPreferenciasAuthSearch.Designer.cs">
+      <DependentUpon>controlPreferenciasAuthSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlPreferenciasORASchemaQuery.cs" />
+    <Compile Include="GUI\controlPreferenciasORASchemaQuery.Designer.cs">
+      <DependentUpon>controlPreferenciasORASchemaQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlPreferenciasPGSQLSchemaQuery.cs" />
+    <Compile Include="GUI\controlPreferenciasPGSQLSchemaQuery.Designer.cs">
+      <DependentUpon>controlPreferenciasPGSQLSchemaQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlPreferenciasSGDSearch.cs" />
+    <Compile Include="GUI\controlPreferenciasSGDSearch.Designer.cs">
+      <DependentUpon>controlPreferenciasSGDSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlSGDManager.cs" />
+    <Compile Include="GUI\controlSGDManager.Designer.cs">
+      <DependentUpon>controlSGDManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlSRSManager.cs" />
+    <Compile Include="GUI\controlSRSManager.Designer.cs">
+      <DependentUpon>controlSRSManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmAutentificacion.cs" />
+    <Compile Include="GUI\frmAutentificacion.Designer.cs">
+      <DependentUpon>frmAutentificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEsquemaBD.cs" />
+    <Compile Include="GUI\frmEsquemaBD.Designer.cs">
+      <DependentUpon>frmEsquemaBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmPreferencias.cs" />
+    <Compile Include="GUI\frmPreferencias.Designer.cs">
+      <DependentUpon>frmPreferencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ModeloAdminTools\SesionAT.cs" />
+    <Compile Include="ModeloDocumento\DefaultAuthRequest.cs" />
+    <Compile Include="ModeloDocumento\DefaultAuthResponse.cs" />
+    <Compile Include="ModeloDocumento\DefaultProfileRequest.cs" />
+    <Compile Include="ModeloDocumento\DefaultProfileResponse.cs" />
+    <Compile Include="ModeloDocumento\Loader.cs" />
+    <Compile Include="ModeloDocumento\LoaderRule.cs" />
+    <Compile Include="ModeloDocumento\RemoteSettings.cs" />
+    <Compile Include="ModeloDocumento\RootModule.cs" />
+    <Compile Include="ModeloExplotacion\Usos\Enums.cs" />
+    <Compile Include="ModeloSincronizacion\SesionSinc.cs" />
+    <Compile Include="ModeloSincronizacion\Operacion.cs" />
+    <Compile Include="ModeloSincronizacion\PreSincro.cs" />
+    <Compile Include="ModeloSincronizacion\Sincro.cs" />
+    <Compile Include="ModeloSincronizacion\PostSincro.cs" />
+    <Compile Include="ModeloSincronizacion\Comando.cs" />
+    <Compile Include="ModeloSincronizacion\Tarea.cs" />
+    <EmbeddedResource Include="ExceptionStrings.es-ES.resx" />
+    <EmbeddedResource Include="ExceptionStrings.resx" />
+    <EmbeddedResource Include="Geeks.resx" />
+    <EmbeddedResource Include="GUI\controlAdminTools.resx">
+      <DependentUpon>controlAdminTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\controlUploadClient.resx">
+      <DependentUpon>controlUploadClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\controlPreferenciasAuthSearch.resx">
+      <DependentUpon>controlPreferenciasAuthSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\controlPreferenciasLoginService.resx">
+      <DependentUpon>controlPreferenciasLoginService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\controlPreferenciasORASchemaQuery.resx">
+      <DependentUpon>controlPreferenciasORASchemaQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\controlPreferenciasPGSQLSchemaQuery.resx">
+      <DependentUpon>controlPreferenciasPGSQLSchemaQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\controlPreferenciasSGDSearch.resx">
+      <DependentUpon>controlPreferenciasSGDSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\controlProfileBrowser.resx">
+      <DependentUpon>controlProfileBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\controlSGDManager.resx">
+      <DependentUpon>controlSGDManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\controlSGDUploadManager.resx">
+      <DependentUpon>controlSGDUploadManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\controlSRSManager.resx">
+      <DependentUpon>controlSRSManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmAboutBox.resx">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmAutentificacion.resx">
+      <DependentUpon>frmAutentificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEsquemaBD.resx">
+      <DependentUpon>frmEsquemaBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmHTTPBasicAuth.resx">
+      <DependentUpon>frmHTTPBasicAuth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPerfilMultiple.resx">
+      <DependentUpon>frmPerfilMultiple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSuplantacion.resx">
+      <DependentUpon>frmSuplantacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmVisorSucesos.resx">
+      <DependentUpon>frmVisorSucesos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrefsBD.resx" />
+    <EmbeddedResource Include="GUI\controlArbolActividades.resx">
+      <DependentUpon>controlArbolActividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\controlArbolGruposActividad.resx">
+      <DependentUpon>controlArbolGruposActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPreferencias.resx">
+      <DependentUpon>frmPreferencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlOperacion.Designer.cs">
+      <DependentUpon>controlOperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlOperacion.cs" />
+    <EmbeddedResource Include="GUI\controlOperacion.resx">
+      <DependentUpon>controlOperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlOrdenarOperaciones.Designer.cs">
+      <DependentUpon>controlOrdenarOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlOrdenarOperaciones.cs" />
+    <EmbeddedResource Include="GUI\controlOrdenarOperaciones.resx">
+      <DependentUpon>controlOrdenarOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloSincronizacion\Complemento.cs" />
+    <Compile Include="GUI\controlSesionSinc.Designer.cs">
+      <DependentUpon>controlSesionSinc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlSesionSinc.cs" />
+    <EmbeddedResource Include="GUI\controlSesionSinc.resx">
+      <DependentUpon>controlSesionSinc.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\GUIUtils.cs" />
+    <Compile Include="GUI\controlOrdenarPreSincros.Designer.cs">
+      <DependentUpon>controlOrdenarPreSincros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlOrdenarPreSincros.cs" />
+    <EmbeddedResource Include="GUI\controlOrdenarPreSincros.resx">
+      <DependentUpon>controlOrdenarPreSincros.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlOrdenarSincros.Designer.cs">
+      <DependentUpon>controlOrdenarSincros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlOrdenarSincros.cs" />
+    <EmbeddedResource Include="GUI\controlOrdenarSincros.resx">
+      <DependentUpon>controlOrdenarSincros.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlOrdenarPostSincros.Designer.cs">
+      <DependentUpon>controlOrdenarPostSincros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlOrdenarPostSincros.cs" />
+    <EmbeddedResource Include="GUI\controlOrdenarPostSincros.resx">
+      <DependentUpon>controlOrdenarPostSincros.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlOrdenarComplementos.Designer.cs">
+      <DependentUpon>controlOrdenarComplementos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlOrdenarComplementos.cs" />
+    <EmbeddedResource Include="GUI\controlOrdenarComplementos.resx">
+      <DependentUpon>controlOrdenarComplementos.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlPreSincro.Designer.cs">
+      <DependentUpon>controlPreSincro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlPreSincro.cs" />
+    <EmbeddedResource Include="GUI\controlPreSincro.resx">
+      <DependentUpon>controlPreSincro.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlSincro.Designer.cs">
+      <DependentUpon>controlSincro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlSincro.cs" />
+    <EmbeddedResource Include="GUI\controlSincro.resx">
+      <DependentUpon>controlSincro.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlPostSincro.Designer.cs">
+      <DependentUpon>controlPostSincro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlPostSincro.cs" />
+    <EmbeddedResource Include="GUI\controlPostSincro.resx">
+      <DependentUpon>controlPostSincro.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlComplemento.Designer.cs">
+      <DependentUpon>controlComplemento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlComplemento.cs" />
+    <EmbeddedResource Include="GUI\controlComplemento.resx">
+      <DependentUpon>controlComplemento.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloSincronizacion\CmdSeleccionar.cs" />
+    <Compile Include="GUI\frmConexionPGSQL.Designer.cs">
+      <DependentUpon>frmConexionPGSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmConexionPGSQL.cs" />
+    <EmbeddedResource Include="GUI\frmConexionPGSQL.resx">
+      <DependentUpon>frmConexionPGSQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\frmConexionORA.Designer.cs">
+      <DependentUpon>frmConexionORA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmConexionORA.cs" />
+    <EmbeddedResource Include="GUI\frmConexionORA.resx">
+      <DependentUpon>frmConexionORA.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlCmdSeleccionar.Designer.cs">
+      <DependentUpon>controlCmdSeleccionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlCmdSeleccionar.cs" />
+    <EmbeddedResource Include="GUI\controlCmdSeleccionar.resx">
+      <DependentUpon>controlCmdSeleccionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloSincronizacion\CmdComparar.cs" />
+    <Compile Include="ModeloSincronizacion\CmdEditar.cs" />
+    <Compile Include="GUI\controlOrdenarComandos.Designer.cs">
+      <DependentUpon>controlOrdenarComandos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlOrdenarComandos.cs" />
+    <EmbeddedResource Include="GUI\controlOrdenarComandos.resx">
+      <DependentUpon>controlOrdenarComandos.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\frmDatos.Designer.cs">
+      <DependentUpon>frmDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDatos.cs" />
+    <EmbeddedResource Include="GUI\frmDatos.resx">
+      <DependentUpon>frmDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlCmdComparar.Designer.cs">
+      <DependentUpon>controlCmdComparar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlCmdComparar.cs" />
+    <EmbeddedResource Include="GUI\controlCmdComparar.resx">
+      <DependentUpon>controlCmdComparar.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Perfiles\Enums.cs" />
+    <Compile Include="Perfiles\ObjectFactory.cs" />
+    <Compile Include="Perfiles\Profile.cs" />
+    <Compile Include="Perfiles\UserProfile.cs" />
+    <Compile Include="Perfiles\UserProfileQuery.cs" />
+    <Compile Include="Preferencias\AdministradorPreferencias.cs" />
+    <Compile Include="Preferencias\Enums.cs" />
+    <Compile Include="Preferencias\Preferencias.cs" />
+    <Compile Include="DB\DBSettings.cs" />
+    <Compile Include="DB\DBUtils.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\Acceso.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\Administracion.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\Almacen.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\Aula.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\Despacho.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\Edificio.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\Enums.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\Estancia.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\IUnidadGeoEstadistica.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\Laboratorio.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\PlantaEdificio.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\PlantaBase.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\PlantaUEM.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\PlantaZona.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\SalaMantenimiento.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\SalaReunion.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\SuperficieGenerica.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\SuperficieNoUtil.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\BaseOrg.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\UEM.cs" />
+    <Compile Include="ModeloExplotacion\Espacios\Zona.cs" />
+    <Compile Include="ModeloExplotacion\Organizacion\AreaConocimiento.cs" />
+    <Compile Include="ModeloExplotacion\Organizacion\Centro.cs" />
+    <Compile Include="ModeloExplotacion\Organizacion\Departamento.cs" />
+    <Compile Include="ModeloExplotacion\Organizacion\DepartamentoSIGUA.cs" />
+    <Compile Include="ModeloExplotacion\Organizacion\SubUnidad.cs" />
+    <Compile Include="ModeloExplotacion\Organizacion\Unidad.cs" />
+    <Compile Include="ModeloExplotacion\PaginaPropiedades.cs" />
+    <Compile Include="ModeloExplotacion\Personas\AsignacionCargo.cs" />
+    <Compile Include="ModeloExplotacion\Personas\Becario.cs" />
+    <Compile Include="ModeloExplotacion\Personas\Cargo.cs" />
+    <Compile Include="ModeloExplotacion\Personas\Enums.cs" />
+    <Compile Include="ModeloExplotacion\Personas\Externo.cs" />
+    <Compile Include="ModeloExplotacion\Personas\PAS.cs" />
+    <Compile Include="ModeloExplotacion\Personas\PDI.cs" />
+    <Compile Include="ModeloExplotacion\Personas\Persona.cs" />
+    <Compile Include="ModeloExplotacion\Personas\Puesto.cs" />
+    <Compile Include="ModeloExplotacion\Personas\Ubicacion.cs" />
+    <Compile Include="ModeloExplotacion\PuntoAcceso.cs" />
+    <Compile Include="ModeloExplotacion\PropiedadEscalar.cs" />
+    <Compile Include="ModeloExplotacion\SesionExplotacion.cs" />
+    <Compile Include="ModeloExplotacion\Usos\ActividadSIGUA.cs" />
+    <Compile Include="ModeloExplotacion\Usos\GrupoActividad.cs" />
+    <Compile Include="ModeloExplotacion\Usos\GrupoCRUE.cs" />
+    <Compile Include="ModeloExplotacion\Usos\GrupoPropio.cs" />
+    <Compile Include="ModeloExplotacion\Usos\GrupoUXXI.cs" />
+    <Compile Include="ModeloExplotacion\Utilidades\GeneradorListasPrimarias.cs" />
+    <Compile Include="ModeloExplotacion\Utilidades\ObjectFactory.cs" />
+    <Compile Include="SOAP\SOAPMethodInfo.cs" />
+    <Compile Include="SOAP\SOAPParamInfo.cs" />
+    <Compile Include="SOAP\WSDLProxy.cs" />
+    <Compile Include="SOAP\WSDLProxyMethod.cs" />
+    <Compile Include="SOAP\WSDLProxyParam.cs" />
+    <Compile Include="Utilidades\Dependency.cs" />
+    <Compile Include="Utilidades\Geek.cs" />
+    <Compile Include="Utilidades\MinServe.cs" />
+    <Compile Include="Utilidades\Rijndael.cs" />
+    <Compile Include="XML\XMLUtils.cs" />
+    <Compile Include="DB\Enums.cs" />
+    <Compile Include="ModeloDocumento\Root.cs" />
+    <Compile Include="GUI\controlSesionExplotacion.Designer.cs">
+      <DependentUpon>controlSesionExplotacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlSesionExplotacion.cs" />
+    <EmbeddedResource Include="GUI\controlSesionExplotacion.resx">
+      <DependentUpon>controlSesionExplotacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloDocumento\Enums.cs" />
+    <Compile Include="GUI\controlOrdenarPuntosAcceso.Designer.cs">
+      <DependentUpon>controlOrdenarPuntosAcceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlOrdenarPuntosAcceso.cs" />
+    <EmbeddedResource Include="GUI\controlOrdenarPuntosAcceso.resx">
+      <DependentUpon>controlOrdenarPuntosAcceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloSincronizacion\CmdSincronizar.cs" />
+    <Compile Include="GUI\controlCmdSincronizar.Designer.cs">
+      <DependentUpon>controlCmdSincronizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlCmdSincronizar.cs" />
+    <EmbeddedResource Include="GUI\controlCmdSincronizar.resx">
+      <DependentUpon>controlCmdSincronizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\frmExcepciones.Designer.cs">
+      <DependentUpon>frmExcepciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmExcepciones.cs" />
+    <EmbeddedResource Include="GUI\frmExcepciones.resx">
+      <DependentUpon>frmExcepciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloSincronizacion\CfgExcepciones.cs" />
+    <Compile Include="GUI\frmAfectados.Designer.cs">
+      <DependentUpon>frmAfectados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmAfectados.cs" />
+    <EmbeddedResource Include="GUI\frmAfectados.resx">
+      <DependentUpon>frmAfectados.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlCmdEditar.Designer.cs">
+      <DependentUpon>controlCmdEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlCmdEditar.cs" />
+    <EmbeddedResource Include="GUI\controlCmdEditar.resx">
+      <DependentUpon>controlCmdEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\frmEdicion.Designer.cs">
+      <DependentUpon>frmEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEdicion.cs" />
+    <EmbeddedResource Include="GUI\frmEdicion.resx">
+      <DependentUpon>frmEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloClienteSOAP\SesionSOAP.cs" />
+    <Compile Include="ModeloSincronizacion\CmdAvisar.cs" />
+    <Compile Include="GUI\controlCmdAvisar.Designer.cs">
+      <DependentUpon>controlCmdAvisar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlCmdAvisar.cs" />
+    <EmbeddedResource Include="GUI\controlCmdAvisar.resx">
+      <DependentUpon>controlCmdAvisar.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloClienteSQL\ClienteSQL.cs" />
+    <Compile Include="GUI\controlClienteSQL.Designer.cs">
+      <DependentUpon>controlClienteSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlClienteSQL.cs" />
+    <EmbeddedResource Include="GUI\controlClienteSQL.resx">
+      <DependentUpon>controlClienteSQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloClienteSQL\SesionSQL.cs" />
+    <Compile Include="GUI\controlAutoSincro.Designer.cs">
+      <DependentUpon>controlAutoSincro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlAutoSincro.cs" />
+    <EmbeddedResource Include="GUI\controlAutoSincro.resx">
+      <DependentUpon>controlAutoSincro.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloSincronizacion\AutoSincro\Secuenciador.cs" />
+    <Compile Include="GUI\controlDatos.Designer.cs">
+      <DependentUpon>controlDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlDatos.cs" />
+    <EmbeddedResource Include="GUI\controlDatos.resx">
+      <DependentUpon>controlDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloSincronizacion\Enums.cs" />
+    <Compile Include="DB\IDBEntity.cs" />
+    <Compile Include="GUI\controlArbolEspacios.Designer.cs">
+      <DependentUpon>controlArbolEspacios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlArbolEspacios.cs" />
+    <EmbeddedResource Include="GUI\controlArbolEspacios.resx">
+      <DependentUpon>controlArbolEspacios.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\Enums.cs" />
+    <Compile Include="GUI\controlPropiedadesUGE.Designer.cs">
+      <DependentUpon>controlPropiedadesUGE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlPropiedadesUGE.cs" />
+    <EmbeddedResource Include="GUI\controlPropiedadesUGE.resx">
+      <DependentUpon>controlPropiedadesUGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\frmArbolMapa.Designer.cs">
+      <DependentUpon>frmArbolMapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmArbolMapa.cs" />
+    <EmbeddedResource Include="GUI\frmArbolMapa.resx">
+      <DependentUpon>frmArbolMapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloCartografia\Simbologia\SimbLayEdificio.cs" />
+    <Compile Include="ModeloCartografia\Simbologia\Constantes.cs" />
+    <Compile Include="ModeloCartografia\Simbologia\SimbLayEdificioMuros.cs" />
+    <Compile Include="ModeloCartografia\Simbologia\SimbLaySelPlanta.cs" />
+    <Compile Include="ModeloCartografia\Simbologia\SimbLaySelEst.cs" />
+    <Compile Include="ModeloCartografia\Simbologia\SimbLayInfoEst.cs" />
+    <Compile Include="ModeloCartografia\Simbologia\SimbLayTemaUsos.cs" />
+    <Compile Include="ModeloCartografia\Simbologia\Enums.cs" />
+    <Compile Include="ModeloCartografia\Simbologia\SimbBase.cs" />
+    <Compile Include="ModeloCartografia\Simbologia\Renderizador.cs" />
+    <Compile Include="Topologia\TopoUtils.cs" />
+    <Compile Include="ModeloCartografia\Simbologia\Paleta.cs" />
+    <Compile Include="ModeloCartografia\Simbologia\ItemPaleta.cs" />
+    <Compile Include="ModeloCartografia\AdminMapas.cs" />
+    <Compile Include="ModeloCartografia\EntradaLeyenda.cs" />
+    <Compile Include="ModeloCartografia\EntradaLeyendaBD.cs" />
+    <Compile Include="ModeloCartografia\Simbologia\SimbPorDefecto.cs" />
+    <Compile Include="ModeloCartografia\EntradaLeyendaTematica.cs" />
+    <Compile Include="ModeloCartografia\Leyenda.cs" />
+    <Compile Include="ModeloCartografia\EntradaLeyendaConsulta.cs" />
+    <Compile Include="ModeloCartografia\EntradaLeyendaSeleccion.cs" />
+    <Compile Include="ModeloCartografia\EntradaLeyendaInformacion.cs" />
+    <Compile Include="ModeloCartografia\SubEntradaLeyendaTematica.cs" />
+    <Compile Include="Utilidades\Regex.cs" />
+    <Compile Include="ModeloCartografia\PDF\Enums.cs" />
+    <Compile Include="ModeloCartografia\PDF\TransformsProvider.cs" />
+    <Compile Include="ModeloCartografia\PDF\Sizes.cs" />
+    <Compile Include="ModeloCartografia\PDF\Frame.cs" />
+    <Compile Include="ModeloCartografia\PDF\MapFrame.cs" />
+    <Compile Include="ModeloCartografia\PDF\GraphicScale.cs" />
+    <Compile Include="ModeloCartografia\PDF\CoordinateMarks.cs" />
+    <Compile Include="ModeloCartografia\PDF\TextField.cs" />
+    <Compile Include="ModeloCartografia\PDF\DateStampField.cs" />
+    <Compile Include="ModeloCartografia\PDF\SimpleLayout.cs" />
+    <Compile Include="ModeloCartografia\PDF\ParamField.cs" />
+    <Compile Include="ModeloCartografia\PDF\PDFMap.cs" />
+    <Compile Include="ModeloCartografia\PDF\LayoutHelper.cs" />
+    <EmbeddedResource Include="ModeloCartografia\PDF\LogoSIGUANET.bmp" />
+    <Compile Include="ModeloCartografia\PDF\Logo.cs" />
+    <EmbeddedResource Include="ModeloCartografia\PDF\LogoSIGUANETContributor.bmp" />
+    <Compile Include="ModeloCartografia\PDF\PDFLegend.cs" />
+    <Compile Include="GUI\frmArbolDatos.Designer.cs">
+      <DependentUpon>frmArbolDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmArbolDatos.cs" />
+    <EmbeddedResource Include="GUI\frmArbolDatos.resx">
+      <DependentUpon>frmArbolDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlArbolOrganizacion.Designer.cs">
+      <DependentUpon>controlArbolOrganizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlArbolOrganizacion.cs" />
+    <EmbeddedResource Include="GUI\controlArbolOrganizacion.resx">
+      <DependentUpon>controlArbolOrganizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlMapView.Designer.cs">
+      <DependentUpon>controlMapView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlMapView.cs" />
+    <EmbeddedResource Include="GUI\controlMapView.resx">
+      <DependentUpon>controlMapView.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloClienteSOAP\SOAPServiceInfo.cs" />
+    <Compile Include="GUI\frmConexionSOAP.Designer.cs">
+      <DependentUpon>frmConexionSOAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmConexionSOAP.cs" />
+    <EmbeddedResource Include="GUI\frmConexionSOAP.resx">
+      <DependentUpon>frmConexionSOAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="SOAP\SOAPSettings.cs" />
+    <Compile Include="GUI\controlSesionSOAP.Designer.cs">
+      <DependentUpon>controlSesionSOAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlSesionSOAP.cs" />
+    <EmbeddedResource Include="GUI\controlSesionSOAP.resx">
+      <DependentUpon>controlSesionSOAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\frmMetodosSOAP.Designer.cs">
+      <DependentUpon>frmMetodosSOAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmMetodosSOAP.cs" />
+    <EmbeddedResource Include="GUI\frmMetodosSOAP.resx">
+      <DependentUpon>frmMetodosSOAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloClienteSOAP\Enums.cs" />
+    <Compile Include="GUI\controlClienteSOAP.Designer.cs">
+      <DependentUpon>controlClienteSOAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlClienteSOAP.cs" />
+    <EmbeddedResource Include="GUI\controlClienteSOAP.resx">
+      <DependentUpon>controlClienteSOAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\frmTestSOAP.Designer.cs">
+      <DependentUpon>frmTestSOAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmTestSOAP.cs" />
+    <EmbeddedResource Include="GUI\frmTestSOAP.resx">
+      <DependentUpon>frmTestSOAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="SOAP\WSDLDocument.cs" />
+    <Compile Include="SOAP\WSDLMethod.cs" />
+    <Compile Include="SOAP\WSDLParam.cs" />
+    <Compile Include="ModeloClienteSOAP\SOAPPublicContainer.cs" />
+    <Compile Include="ModeloClienteSOAP\SOAPGroup.cs" />
+    <Compile Include="ModeloClienteSOAP\SOAPPrivateContainer.cs" />
+    <Compile Include="GUI\frmGruposSOAP.Designer.cs">
+      <DependentUpon>frmGruposSOAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmGruposSOAP.cs" />
+    <EmbeddedResource Include="GUI\frmGruposSOAP.resx">
+      <DependentUpon>frmGruposSOAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ModeloClienteSOAP\ISOAPContainer.cs" />
+    <Compile Include="GUI\controlSOAPContainer.Designer.cs">
+      <DependentUpon>controlSOAPContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlSOAPContainer.cs" />
+    <EmbeddedResource Include="GUI\controlSOAPContainer.resx">
+      <DependentUpon>controlSOAPContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GUI\controlSOAPGroup.Designer.cs">
+      <DependentUpon>controlSOAPGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\controlSOAPGroup.cs" />
+    <EmbeddedResource Include="GUI\controlSOAPGroup.resx">
+      <DependentUpon>controlSOAPGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrefsGlobal.resx" />
+    <Compile Include="GUI\GUISettings.cs" />
+    <None Include="NetTopologySuiteLicense.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Npgsql1License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Npgsql2License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PdfSharpLicense.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SharpMapLicense.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SIGUANETDesktopLicense.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Perfiles" />
+    <Folder Include="Log" />
+    <Folder Include="ModeloAdminTools" />
+    <Folder Include="Preferencias" />
+    <Folder Include="GUI" />
+    <Folder Include="DB" />
+    <Folder Include="ModeloExplotacion" />
+    <Folder Include="ModeloExplotacion\Espacios" />
+    <Folder Include="ModeloExplotacion\Organizacion" />
+    <Folder Include="ModeloExplotacion\Personas" />
+    <Folder Include="ModeloExplotacion\Usos" />
+    <Folder Include="ModeloExplotacion\Utilidades" />
+    <Folder Include="XML" />
+    <Folder Include="ModeloDocumento" />
+    <Folder Include="ModeloClienteSOAP" />
+    <Folder Include="ModeloClienteSQL" />
+    <Folder Include="ModeloSincronizacion\AutoSincro" />
+    <Folder Include="ModeloCartografia" />
+    <Folder Include="ModeloCartografia\Simbologia" />
+    <Folder Include="Topologia" />
+    <Folder Include="Utilidades" />
+    <Folder Include="ModeloCartografia\PDF" />
+    <Folder Include="SOAP" />
+    <ProjectReference Include="..\SharpMap\SharpMap.csproj">
+      <Project>{C83777FC-AABB-47D9-911F-D76255D4D541}</Project>
+      <Name>SharpMap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIGUANETDesktop.Extension\SIGUANETDesktop.Extension.csproj">
+      <Project>{AB8B7197-0E3C-47DB-954E-7F0F6BD96055}</Project>
+      <Name>SIGUANETDesktop.Extension</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>
