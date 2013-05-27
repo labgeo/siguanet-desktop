@@ -38,6 +38,6 @@
     <Compile Include="IProfileRequest.cs" />
     <Compile Include="IProfileResponse.cs" />
     <Compile Include="IUserLoginView.cs" />
-    <None Include="app.config" />
+    <None Include="app.config.sample" />
   </ItemGroup>
 </Project>
