@@ -1,0 +1,9 @@
+bin/
+obj/
+lib/Npgsql/1.0/
+lib/Npgsql/2.0/
+*.pdb
+Thumbs.db
+Thumbs.db*
+*~
+*.suo
