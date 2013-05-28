@@ -1,0 +1,1589 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Perfil="Administrador" PerfilPersonalizado="" Version="1.2" Caducidad="9000-01-01T00:00:00" Modificado="2008-05-14T09:04:37.96875+02:00" Url="http://127.0.0.1:8082/minserve/Administrador_1.2.sgd" Autor="Laboratorio de Geomática - Universidad de Alicante" Nombre="SIGUANETDesktop" Descripcion="Configuración de sesión de SIGUANETDesktop" Doc="">
+  <Sincronizacion Enabled="false" Nombre="Sincronización" Descripcion="" Doc="">
+    <Operaciones />
+  </Sincronizacion>
+  <Explotacion Enabled="true" Nombre="Datos geográficos" Descripcion="Acceso a la base de datos PostgreSQL / PostGIS" Doc="">
+    <PuntosAcceso>
+      <PuntoAcceso Tipo="ArbolEspacial" Nombre="Árbol de Espacios" Descripcion="Vista jerarquizada de la distribución general de los espacios" Doc="">
+        <Propiedades>
+          <Items>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Cartografia" Grupo="Estancias">
+              <Titulo>Total Estancias</Titulo>
+              <Descripcion>Número total de estancias. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstancias</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet>Total Estancias</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Cartografia" Grupo="Estancias">
+              <Titulo>Superficie Total</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de estancia</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstancias</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet>Total Estancias</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Cartografia" Grupo="Estancias">
+              <Titulo>Estancias Útiles</Titulo>
+              <Descripcion>Número total de estancias cuyo uso está catalogado como útil en la tabla de actividades SIGUA</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasUtiles</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet>Total Estancias</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Cartografia" Grupo="Estancias">
+              <Titulo>Superficie Útil</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de estancia cuyo uso está catalogado como útil en la tabla de actividades SIGUA</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasUtiles</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet>Total Estancias</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Despachos ocupados</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumDespachosOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerDespachosOcupados</MetodoDataSet>
+              <TituloDataSet>Despachos ocupados</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Despachos Ocupados</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieDespachosOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerDespachosOcupados</MetodoDataSet>
+              <TituloDataSet>Despachos ocupados</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Administraciones Ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumAdmonOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerAdmonOcupados</MetodoDataSet>
+              <TituloDataSet>Administraciones Ocupadas</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Administraciones Ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieAdmonOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerAdmonOcupados</MetodoDataSet>
+              <TituloDataSet>Administraciones Ocupadas</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Despachos No Ocupados</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumDespachosNoOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerDespachosNoOcupados</MetodoDataSet>
+              <TituloDataSet>Despachos No Ocupados</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Despachos No Ocupados</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieDespachosNoOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerDespachosNoOcupados</MetodoDataSet>
+              <TituloDataSet>Despachos No Ocupados</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Administraciones No Ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumAdmonNoOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerAdmonNoOcupados</MetodoDataSet>
+              <TituloDataSet>Administraciones No Ocupadas</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Administraciones No Ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieAdmonNoOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerAdmonNoOcupados</MetodoDataSet>
+              <TituloDataSet>Administraciones No Ocupadas</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias Docentes</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasDocentes</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasDocentes</MetodoDataSet>
+              <TituloDataSet>Estancias Docentes</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Estancias Docentes</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasDocentes</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasDocentes</MetodoDataSet>
+              <TituloDataSet>Estancias Docentes</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias ocupadas</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Estancias Ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias ocupadas</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Personas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPersonas</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicaciones</MetodoDataSet>
+              <TituloDataSet>Total Personas</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidad</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Total Personas sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>NumPersonasNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPendientes</MetodoDataSet>
+              <TituloDataSet>Total Personas sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Porcentaje de Personas sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>PorcentajePersonasNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPendientes</MetodoDataSet>
+              <TituloDataSet>Total Personas sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} %</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total PAS</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPAS</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPAS</MetodoDataSet>
+              <TituloDataSet>Total PAS</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad PAS</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadPAS</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Total PAS sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>NumPASNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPASPendientes</MetodoDataSet>
+              <TituloDataSet>Total PAS sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Porcentaje de PAS sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>PorcentajePASNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPASPendientes</MetodoDataSet>
+              <TituloDataSet>Total PAS sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} %</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total PDI</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPDI</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPDI</MetodoDataSet>
+              <TituloDataSet>Total PDI</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad PDI</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadPDI</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Total PDI sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>NumPDINoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPDIPendientes</MetodoDataSet>
+              <TituloDataSet>Total PDI sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Porcentaje de PDI sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>PorcentajePDINoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPDIPendientes</MetodoDataSet>
+              <TituloDataSet>Total PDI sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} %</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total PDI con Cargo</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPDICargos</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPDICargos</MetodoDataSet>
+              <TituloDataSet>Total PDI con Cargo</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Total PDI con Cargo sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>NumPDICargosNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPDICargosPendientes</MetodoDataSet>
+              <TituloDataSet>Total PDI con Cargo sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Becarios</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumBecarios</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesBecarios</MetodoDataSet>
+              <TituloDataSet>Total Becarios</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad Becarios</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadBecarios</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Total Becarios sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>NumBecariosNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesBecariosPendientes</MetodoDataSet>
+              <TituloDataSet>Total Becarios sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Porcentaje de Becarios sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>PorcentajeBecariosNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesBecariosPendientes</MetodoDataSet>
+              <TituloDataSet>Total Becarios sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} %</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Externos</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumExternos</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesExternos</MetodoDataSet>
+              <TituloDataSet>Total Externos</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad Externos</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadExternos</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Total Externos sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>NumExternosNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesExternosPendientes</MetodoDataSet>
+              <TituloDataSet>Total Externos sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Porcentaje de Externos No Ubicados</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>PorcentajeExternosNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesExternosPendientes</MetodoDataSet>
+              <TituloDataSet>Total Externos sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} %</FormatoCadena>
+            </PropiedadEscalar>
+          </Items>
+        </Propiedades>
+      </PuntoAcceso>
+      <PuntoAcceso Tipo="ArbolOrganizativo" Nombre="Árbol de Organización" Descripcion="Vista jerarquizada de la distribución de los espacios adscritos a cada Departamento o Unidad" Doc="">
+        <Propiedades>
+          <Items>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Total Estancias</Titulo>
+              <Descripcion>Número total de estancias del departamento. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstancias</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstancias</MetodoDataSet>
+              <TituloDataSet>Total Estancias adscritas a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Total</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de las estancias adscritas al departamento</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstancias</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstancias</MetodoDataSet>
+              <TituloDataSet>Total Estancias adscritas a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias Útiles</Titulo>
+              <Descripcion>Número total de estancias del departamento cuyo uso está catalogado como útil en la tabla de actividades SIGUA</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasUtiles</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasUtiles</MetodoDataSet>
+              <TituloDataSet>Estancias Útiles adscritas a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Útil</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de las estancias adscritas al departamento cuyo uso está catalogado como útil en la tabla de actividades SIGUA</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasUtiles</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasUtiles</MetodoDataSet>
+              <TituloDataSet>Estancias Útiles adscritas a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Despachos Ocupados</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumDespachosOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerDespachosOcupados</MetodoDataSet>
+              <TituloDataSet>Despachos Ocupados adscritos a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Despachos Ocupados</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieDespachosOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerDespachosOcupados</MetodoDataSet>
+              <TituloDataSet>Despachos Ocupados adscritos a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Administraciones Ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumAdmonOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerAdmonOcupados</MetodoDataSet>
+              <TituloDataSet>Administraciones Ocupadas adscritas a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Administraciones Ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieAdmonOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerAdmonOcupados</MetodoDataSet>
+              <TituloDataSet>Administraciones Ocupadas adscritas a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Despachos No Ocupados</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumDespachosNoOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerDespachosNoOcupados</MetodoDataSet>
+              <TituloDataSet>Despachos No Ocupados adscritos a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Despachos No Ocupados</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieDespachosNoOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerDespachosNoOcupados</MetodoDataSet>
+              <TituloDataSet>Despachos No Ocupados adscritos a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Administraciones No Ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumAdmonNoOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerAdmonNoOcupados</MetodoDataSet>
+              <TituloDataSet>Administraciones No Ocupadas adscritas a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Administraciones No Ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieAdmonNoOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerAdmonNoOcupados</MetodoDataSet>
+              <TituloDataSet>Administraciones No Ocupadas adscritas a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias Docentes</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasDocentes</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasDocentes</MetodoDataSet>
+              <TituloDataSet>Estancias Docentes adscritas a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Estancias Docentes</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasDocentes</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasDocentes</MetodoDataSet>
+              <TituloDataSet>Estancias Docentes adscritas a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias Ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias Ocupadas adscritas a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Estancias Ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias Ocupadas adscritas a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Personas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPersonas</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicaciones</MetodoDataSet>
+              <TituloDataSet>Total Personas adscritas a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidad</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Total Personas sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>NumPersonasNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPendientes</MetodoDataSet>
+              <TituloDataSet>Total Personas adscritas a {0} sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Porcentaje Personas sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>PorcentajePersonasNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPendientes</MetodoDataSet>
+              <TituloDataSet>Total Personas adscritas a {0} sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} %</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total PAS</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPAS</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPAS</MetodoDataSet>
+              <TituloDataSet>Total PAS adscritos a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad PAS</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadPAS</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Total PAS sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>NumPASNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPASPendientes</MetodoDataSet>
+              <TituloDataSet>Total PAS adscritos a {0} sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Porcentaje PAS sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>PorcentajePASNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPASPendientes</MetodoDataSet>
+              <TituloDataSet>Total PAS adscritos a {0} sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} %</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>TotalPDI</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPDI</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPDI</MetodoDataSet>
+              <TituloDataSet>Total PDI adscritos a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad PDI</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadPDI</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Total PDI sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>NumPDINoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPDIPendientes</MetodoDataSet>
+              <TituloDataSet>Total PDI adscritos a {0} sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Porcentaje PDI sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>PorcentajePDINoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPDIPendientes</MetodoDataSet>
+              <TituloDataSet>Total PDI adscritos a {0} sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} %</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total PDI con Cargo</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPDICargos</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPDICargos</MetodoDataSet>
+              <TituloDataSet>Total PDI con Cargo en {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Total PDI con Cargo sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>NumPDICargosNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPDICargosPendientes</MetodoDataSet>
+              <TituloDataSet>Total PDI con Cargo en {0} sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Becarios</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumBecarios</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesBecarios</MetodoDataSet>
+              <TituloDataSet>Total Becarios adscritos a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad Becarios</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadBecarios</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Total Becarios sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>NumBecariosNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesBecariosPendientes</MetodoDataSet>
+              <TituloDataSet>Total Becarios adscritos a {0} sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Porcentaje Becarios sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>PorcentajeBecariosNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesBecariosPendientes</MetodoDataSet>
+              <TituloDataSet>Total Becarios adscritos a {0} sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} %</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Externos</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumExternos</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesExternos</MetodoDataSet>
+              <TituloDataSet>Total Externos adscritos a {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad Externos</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadExternos</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Total Externos sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>NumExternosNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesExternosPendientes</MetodoDataSet>
+              <TituloDataSet>Total Externos adscritos a {0} sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Datos" Grupo="Personal">
+              <Titulo>Porcentaje Externos sin Ubicación Conocida</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.BaseOrg</Clase>
+              <MetodoEscalar>PorcentajeExternosNoUbicados</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesExternosPendientes</MetodoDataSet>
+              <TituloDataSet>Total Externos adscritos a {0} sin Ubicación Conocida</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} %</FormatoCadena>
+            </PropiedadEscalar>
+          </Items>
+        </Propiedades>
+      </PuntoAcceso>
+      <PuntoAcceso Tipo="ArbolActividades" Nombre="Árbol de Usos" Descripcion="Vista jerarquizada de la distribución de los espacios según la actividad principal a la que se destinan" Doc="">
+        <Propiedades>
+          <Items>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Total Estancias</Titulo>
+              <Descripcion>Número total de estancias designadas para el uso. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstancias</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstancias</MetodoDataSet>
+              <TituloDataSet>Total Estancias designadas para uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Total</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de las estancias designadas para el uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstancias</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstancias</MetodoDataSet>
+              <TituloDataSet>Total Estancias designadas para uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias Ocupadas</Titulo>
+              <Descripcion>Número de estancias ocupadas designadas para el uso. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias Ocupadas designadas para uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Estancias Ocupadas</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de las estancias ocupadas designadas para el uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias Ocupadas designadas para uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias No Ocupadas</Titulo>
+              <Descripcion>Número de estancias no ocupadas designadas para el uso. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasNoOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasNoOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias No Ocupadas designadas para uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Estancias No Ocupadas</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de las estancias no ocupadas designadas para el uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasNoOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasNoOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias No Ocupadas designadas para uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Personas</Titulo>
+              <Descripcion>Número total de personas que ocupan estancias designadas para el uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPersonas</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicaciones</MetodoDataSet>
+              <TituloDataSet>Total Personas en estancias designadas para uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada persona que ocupa una estancia designada para el uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidad</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total PAS</Titulo>
+              <Descripcion>Número total de empleados PAS que ocupan estancias designadas para el uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPAS</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPAS</MetodoDataSet>
+              <TituloDataSet>Total PAS en estancias designadas para uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>DensidadPAS</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada empleado PAS que ocupa una estancia designada para el uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadPAS</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total PDI</Titulo>
+              <Descripcion>Número total de empleados PDI que ocupan estancias designadas para el uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPDI</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPDI</MetodoDataSet>
+              <TituloDataSet>Total PDI en estancias designadas para uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad PDI</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada empleado PDI que ocupa una estancia designada para el uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadPDI</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Becarios</Titulo>
+              <Descripcion>Número total de becarios que ocupan estancias designadas para el uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumBecarios</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesBecarios</MetodoDataSet>
+              <TituloDataSet>Total Becarios en estancias designadas para uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad becarios</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada becario que ocupa una estancia designada para el uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadBecarios</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Externos</Titulo>
+              <Descripcion>Número total de externos que ocupan estancias designadas para el uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumExternos</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesExternos</MetodoDataSet>
+              <TituloDataSet>Total Externos en estancias designadas para uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad Externos</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada externo que ocupa una estancia designada para el uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadExternos</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+          </Items>
+        </Propiedades>
+      </PuntoAcceso>
+      <PuntoAcceso Tipo="ArbolGruposActividad" Nombre="Árbol de Usos (grupos de actividad propios)" Descripcion="Vista jerarquizada de la distribución de los espacios según el grupo de actividad al que pertenecen bajo el criterio" Doc="">
+        <Propiedades>
+          <Items>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Total Estancias</Titulo>
+              <Descripcion>Número total de estancias designadas para el grupo de uso. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstancias</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstancias</MetodoDataSet>
+              <TituloDataSet>Total Estancias designadas para grupo de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Total</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de las estancias designadas para el grupo de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstancias</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstancias</MetodoDataSet>
+              <TituloDataSet>Total Estancias designadas para grupo de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias Ocupadas</Titulo>
+              <Descripcion>Número de estancias ocupadas designadas para el grupo de uso. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias Ocupadas designadas para grupo de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Estancias Ocupadas</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de las estancias ocupadas designadas para el grupo de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias Ocupadas designadas para grupo de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias No Ocupadas</Titulo>
+              <Descripcion>Número de estancias no ocupadas designadas para el grupo de uso. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasNoOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasNoOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias No Ocupadas designadas para grupo de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Estancias No Ocupadas</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de las estancias no ocupadas designadas para el grupo de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasNoOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasNoOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias No Ocupadas designadas para grupo de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Personas</Titulo>
+              <Descripcion>Número total de personas que ocupan estancias designadas para el grupo de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPersonas</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicaciones</MetodoDataSet>
+              <TituloDataSet>Total Personas en estancias designadas para grupo de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada persona que ocupa una estancia designada para el grupo de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidad</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total PAS</Titulo>
+              <Descripcion>Número total de empleados PAS que ocupan estancias designadas para el grupo de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPAS</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPAS</MetodoDataSet>
+              <TituloDataSet>Total PAS en estancias designadas para grupo de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>DensidadPAS</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada empleado PAS que ocupa una estancia designada para el grupo de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadPAS</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total PDI</Titulo>
+              <Descripcion>Número total de empleados PDI que ocupan estancias designadas para el grupo de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPDI</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPDI</MetodoDataSet>
+              <TituloDataSet>Total PDI en estancias designadas para grupo de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad PDI</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada empleado PDI que ocupa una estancia designada para el grupo de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadPDI</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Becarios</Titulo>
+              <Descripcion>Número total de becarios que ocupan estancias designadas para el grupo de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumBecarios</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesBecarios</MetodoDataSet>
+              <TituloDataSet>Total Becarios en estancias designadas para grupo de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad becarios</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada becario que ocupa una estancia designada para el grupo de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadBecarios</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Externos</Titulo>
+              <Descripcion>Número total de externos que ocupan estancias designadas para el grupo de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumExternos</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesExternos</MetodoDataSet>
+              <TituloDataSet>Total Externos en estancias designadas para grupo de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad Externos</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada externo que ocupa una estancia designada para el grupo de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadExternos</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+          </Items>
+        </Propiedades>
+      </PuntoAcceso>
+      <PuntoAcceso Tipo="ArbolGruposActividadCRUE" Nombre="Árbol de Usos (grupos de actividad CRUE)" Descripcion="Vista jerarquizada de la distribución de los espacios según el grupo de actividad al que pertenecen bajo el criterio de la Conferencia de Rectores de las Universidades Españolas" Doc="">
+        <Propiedades>
+          <Items>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Total Estancias</Titulo>
+              <Descripcion>Número total de estancias designadas para el grupo de uso CRUE. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstancias</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstancias</MetodoDataSet>
+              <TituloDataSet>Total Estancias designadas para grupo CRUE de uso {0} </TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Total</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de las estancias designadas para el grupo CRUE de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstancias</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstancias</MetodoDataSet>
+              <TituloDataSet>Total Estancias designadas para grupo CRUE de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias Ocupadas</Titulo>
+              <Descripcion>Número de estancias ocupadas designadas para el grupo CRUE de uso. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias Ocupadas designadas para grupo CRUE de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Estancias Ocupadas</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de las estancias ocupadas designadas para el grupo CRUE de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias Ocupadas designadas para grupo CRUE de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias No Ocupadas</Titulo>
+              <Descripcion>Número de estancias no ocupadas designadas para el grupo CRUE de uso. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasNoOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasNoOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias No Ocupadas designadas para grupo CRUE de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Estancias No Ocupadas</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de las estancias no ocupadas designadas para el grupo CRUE de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasNoOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasNoOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias No Ocupadas designadas para grupo CRUE de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Personas</Titulo>
+              <Descripcion>Número total de personas que ocupan estancias designadas para el grupo CRUE de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPersonas</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicaciones</MetodoDataSet>
+              <TituloDataSet>Total Personas en estancias designadas para grupo CRUE de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada persona que ocupa una estancia designada para el grupo CRUE de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidad</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total PAS</Titulo>
+              <Descripcion>Número total de empleados PAS que ocupan estancias designadas para el grupo CRUE de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPAS</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPAS</MetodoDataSet>
+              <TituloDataSet>Total PAS en estancias designadas para grupo CRUE de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>DensidadPAS</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada empleado PAS que ocupa una estancia designada para el grupo CRUE de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadPAS</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total PDI</Titulo>
+              <Descripcion>Número total de empleados PDI que ocupan estancias designadas para el grupo CRUE de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPDI</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPDI</MetodoDataSet>
+              <TituloDataSet>Total PDI en estancias designadas para grupo CRUE de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad PDI</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada empleado PDI que ocupa una estancia designada para el grupo CRUE de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadPDI</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Becarios</Titulo>
+              <Descripcion>Número total de becarios que ocupan estancias designadas para el grupo CRUE de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumBecarios</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesBecarios</MetodoDataSet>
+              <TituloDataSet>Total Becarios en estancias designadas para grupo CRUE de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad becarios</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada becario que ocupa una estancia designada para el grupo CRUE de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadBecarios</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Externos</Titulo>
+              <Descripcion>Número total de externos que ocupan estancias designadas para el grupo CRUE de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumExternos</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesExternos</MetodoDataSet>
+              <TituloDataSet>Total Externos en estancias designadas para grupo CRUE de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad Externos</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada externo que ocupa una estancia designada para el grupo CRUE de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadExternos</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+          </Items>
+        </Propiedades>
+      </PuntoAcceso>
+      <PuntoAcceso Tipo="ArbolGruposActividadU21" Nombre="Árbol de Usos (grupos de actividad Universitas XXI)" Descripcion="Vista jerarquizada de la distribución de los espacios según el grupo de actividad al que pertenecen bajo el criterio del Sistema de Información Universitas XXI" Doc="">
+        <Propiedades>
+          <Items>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Total Estancias</Titulo>
+              <Descripcion>Número total de estancias designadas para el grupo UNIVERSITAS XXI de uso. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstancias</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstancias</MetodoDataSet>
+              <TituloDataSet>Total Estancias designadas para grupo UNIVERSITAS XXI de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Total</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de las estancias designadas para el grupo UNIVERSITAS XXI de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstancias</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstancias</MetodoDataSet>
+              <TituloDataSet>Total Estancias designadas para grupo UNIVERSITAS XXI de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias Ocupadas</Titulo>
+              <Descripcion>Número de estancias ocupadas designadas para el grupo UNIVERSITAS XXI de uso. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias Ocupadas designadas para grupo UNIVERSITAS XXI de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Estancias Ocupadas</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de las estancias ocupadas designadas para el grupo UNIVERSITAS XXI de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias Ocupadas designadas para grupo UNIVERSITAS XXI de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias No Ocupadas</Titulo>
+              <Descripcion>Número de estancias no ocupadas designadas para el grupo UNIVERSITAS XXI de uso. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasNoOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasNoOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias No Ocupadas designadas para grupo UNIVERSITAS XXI de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Estancias No Ocupadas</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de las estancias no ocupadas designadas para el grupo UNIVERSITAS XXI de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasNoOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasNoOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias No Ocupadas designadas para grupo UNIVERSITAS XXI de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Personas</Titulo>
+              <Descripcion>Número total de personas que ocupan estancias designadas para el grupo UNIVERSITAS XXI de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPersonas</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicaciones</MetodoDataSet>
+              <TituloDataSet>Total Personas en estancias designadas para grupo UNIVERSITAS XXI de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada persona que ocupa una estancia designada para el grupo UNIVERSITAS XXI de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidad</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total PAS</Titulo>
+              <Descripcion>Número total de empleados PAS que ocupan estancias designadas para el grupo UNIVERSITAS XXI de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPAS</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPAS</MetodoDataSet>
+              <TituloDataSet>Total PAS en estancias designadas para grupo UNIVERSITAS XXI de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>DensidadPAS</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada empleado PAS que ocupa una estancia designada para el grupo UNIVERSITAS XXI de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadPAS</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total PDI</Titulo>
+              <Descripcion>Número total de empleados PDI que ocupan estancias designadas para el grupo UNIVERSITAS XXI de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumPDI</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesPDI</MetodoDataSet>
+              <TituloDataSet>Total PDI en estancias designadas para grupo UNIVERSITAS XXI de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad PDI</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada empleado PDI que ocupa una estancia designada para el grupo UNIVERSITAS XXI de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadPDI</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Becarios</Titulo>
+              <Descripcion>Número total de becarios que ocupan estancias designadas para el grupo UNIVERSITAS XXI de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumBecarios</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesBecarios</MetodoDataSet>
+              <TituloDataSet>Total Becarios en estancias designadas para grupo UNIVERSITAS XXI de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad becarios</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada becario que ocupa una estancia designada para el grupo UNIVERSITAS XXI de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadBecarios</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Personal">
+              <Titulo>Total Externos</Titulo>
+              <Descripcion>Número total de externos que ocupan estancias designadas para el grupo UNIVERSITAS XXI de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumExternos</MetodoEscalar>
+              <MetodoDataSet>ObtenerUbicacionesExternos</MetodoDataSet>
+              <TituloDataSet>Total Externos en estancias designadas para grupo UNIVERSITAS XXI de uso {0}</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar" Grupo="Personal">
+              <Titulo>Densidad Externos</Titulo>
+              <Descripcion>Densidad expresada como la superficie media disponible para cada externo que ocupa una estancia designada para el grupo UNIVERSITAS XXI de uso</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>CalcularDensidadExternos</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet />
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²/persona</FormatoCadena>
+            </PropiedadEscalar>
+          </Items>
+        </Propiedades>
+      </PuntoAcceso>
+    </PuntosAcceso>
+  </Explotacion>
+  <CliSOAP Enabled="true" Nombre="Consultas Web" Descripcion="Acceso al servicio SOAP" Doc="" />
+  <CliSQL Enabled="false" Nombre="SQL" Descripcion="" Doc="" />
+  <ATools Enabled="false" Nombre="Herramientas administrativas" Descripcion="" Doc="" />
+</Root>

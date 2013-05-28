@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Perfil="Publico" PerfilPersonalizado="" Version="1.2" Caducidad="9000-01-01T00:00:00" Modificado="2008-05-14T09:04:02.25+02:00" Url="http://127.0.0.1:8082/minserve/Publico_1.2.sgd" Autor="Laboratorio de Geomática - Universidad de Alicante" Nombre="SIGUANETDesktop" Descripcion="Configuración de sesión de SIGUANETDesktop" Doc="">
+  <Sincronizacion Enabled="false" Nombre="Sincronización" Descripcion="" Doc="">
+    <Operaciones />
+  </Sincronizacion>
+  <Explotacion Enabled="true" Nombre="Datos geográficos" Descripcion="Acceso a la base de datos PostgreSQL / PostGIS" Doc="">
+    <PuntosAcceso>
+      <PuntoAcceso Tipo="ArbolEspacial" Nombre="Árbol de Espacios" Descripcion="Vista jerarquizada de la distribución general de los espacios" Doc="">
+        <Propiedades>
+          <Items>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Cartografia" Grupo="Estancias">
+              <Titulo>Total Estancias</Titulo>
+              <Descripcion>Número total de estancias. Una estancia compuesta de varias geometrías (recintos) contabiliza como una unidad</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstancias</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet>Total Estancias</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Cartografia" Grupo="Estancias">
+              <Titulo>Superficie Total</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de estancia</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstancias</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet>Total Estancias</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Cartografia" Grupo="Estancias">
+              <Titulo>Estancias Útiles</Titulo>
+              <Descripcion>Número total de estancias cuyo uso está catalogado como útil en la tabla de actividades SIGUANET</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasUtiles</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet>Total Estancias</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_y_Cartografia" Grupo="Estancias">
+              <Titulo>Superficie Útil</Titulo>
+              <Descripcion>Suma de las superficies de todas las geometrías de estancia cuyo uso está catalogado como útil en la tabla de actividades SIGUANET</Descripcion>
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasUtiles</MetodoEscalar>
+              <MetodoDataSet />
+              <TituloDataSet>Total Estancias</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Despachos ocupados</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumDespachosOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerDespachosOcupados</MetodoDataSet>
+              <TituloDataSet>Despachos ocupados</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Despachos Ocupados</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieDespachosOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerDespachosOcupados</MetodoDataSet>
+              <TituloDataSet>Despachos ocupados</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Administraciones Ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumAdmonOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerAdmonOcupados</MetodoDataSet>
+              <TituloDataSet>Administraciones Ocupadas</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Administraciones Ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieAdmonOcupados</MetodoEscalar>
+              <MetodoDataSet>ObtenerAdmonOcupados</MetodoDataSet>
+              <TituloDataSet>Administraciones Ocupadas</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias Docentes</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasDocentes</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasDocentes</MetodoDataSet>
+              <TituloDataSet>Estancias Docentes</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Estancias Docentes</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasDocentes</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasDocentes</MetodoDataSet>
+              <TituloDataSet>Estancias Docentes</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Estancias ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>NumEstanciasOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias ocupadas</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar />
+              <FormatoCadena />
+            </PropiedadEscalar>
+            <PropiedadEscalar Accion="Mostrar_Escalar_Cartografia_y_Datos" Grupo="Estancias">
+              <Titulo>Superficie Estancias Ocupadas</Titulo>
+              <Descripcion />
+              <Clase>SIGUANETDesktop.ModeloExplotacion.Espacios.IUnidadGeoEstadistica</Clase>
+              <MetodoEscalar>SuperficieEstanciasOcupadas</MetodoEscalar>
+              <MetodoDataSet>ObtenerEstanciasOcupadas</MetodoDataSet>
+              <TituloDataSet>Estancias ocupadas</TituloDataSet>
+              <ValorDefectoEscalar>0</ValorDefectoEscalar>
+              <FormatoEscalar>F</FormatoEscalar>
+              <FormatoCadena>{0} m²</FormatoCadena>
+            </PropiedadEscalar>
+          </Items>
+        </Propiedades>
+      </PuntoAcceso>
+    </PuntosAcceso>
+  </Explotacion>
+  <CliSOAP Enabled="true" Nombre="Consultas Web" Descripcion="Acceso al servicio SOAP" Doc="" />
+  <CliSQL Enabled="false" Nombre="SQL" Descripcion="" Doc="" />
+  <ATools Enabled="false" Nombre="Herramientas administrativas" Descripcion="" Doc="" />
+</Root>
