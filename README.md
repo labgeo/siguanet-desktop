@@ -25,7 +25,7 @@ It's a Winforms .NET application written in C# which provides users with a unifo
 `siguanet-desktop` is built on .NET framework 2.0.
 
 ### Binary dependencies
-All external support assemblies are included in the lib/ folder, namely:
+All external support assemblies are included in the `lib/` folder, namely:
 * Npgsql2 data provider for PostgreSQL
 * NetTopologySuite 1.7 spatial analysis library
 * PdfSharp 0.9 PDF generation library
@@ -39,4 +39,4 @@ A working SIGUANET database is needed which meets the following requirements:
 * Oracle Instant Client and the corresponding TNSNAMES.ora configuration file are needed for running the ORACLE to SIGUANET bridge
 
 ## How to build and deploy
-You can `siguanet-desktop` can be manually build using SharpDevelop 2.2 and the provided SIGUANETDesktop/SIGUANETDesktop.sln solution file. If you want to distribute `siguanet-desktop` for general use inside your organization, please have a look at the project's Wiki for information on configuration files and add-ins you should add to your build and detailed instructions on other required remote resources. For a typical setup (that targeted to a non system administrator who won't be using the ORACLE to SIGUANET bridge), `siguanet-desktop` can be deployed as a bundle of binaries and configuration files suitable for simple XCOPY install on Windows systems where .NET framework 2.0 is already installed.
+You can manually build  `siguanet-desktop` using SharpDevelop 2.2 and the provided SIGUANETDesktop/SIGUANETDesktop.sln solution file. If you want to distribute `siguanet-desktop` for general use inside your organization, please have a look at the project's Wiki for information on configuration files and add-ins you should add to your build and detailed instructions on other required remote resources. For a typical setup (that targeted to a non system administrator who won't be using the ORACLE to SIGUANET bridge), `siguanet-desktop` can be deployed as a bundle of binaries and configuration files suitable for simple XCOPY install on Windows systems where .NET framework 2.0 is already installed.
