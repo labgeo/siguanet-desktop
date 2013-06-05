@@ -25,7 +25,7 @@ It's a Winforms .NET application written in C# which provides users with a unifo
 `siguanet-desktop` is built on .NET framework 2.0.
 
 ### Binary dependencies
-All external support assemblies are included in the lib/ folder, namely:
+All external support assemblies are included in the `lib/` folder, namely:
 * Npgsql2 data provider for PostgreSQL
 * NetTopologySuite 1.7 spatial analysis library
 * PdfSharp 0.9 PDF generation library
