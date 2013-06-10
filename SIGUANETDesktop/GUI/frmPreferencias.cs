@@ -21,7 +21,6 @@ namespace SIGUANETDesktop.GUI
 	{
 		private enum ActiveNodeNames
 		{
-			LoginService,
 			AuthSearch,
 			SGDSearch,
 			PGSQLSchemaQuery,
@@ -44,11 +43,6 @@ namespace SIGUANETDesktop.GUI
 			{
 				switch ((ActiveNodeNames) Enum.Parse(typeof(ActiveNodeNames), e.Node.Name))
 				{
-				    case ActiveNodeNames.LoginService:
-			        	controlPreferenciasLoginService cLoginSrv = new controlPreferenciasLoginService();
-			        	cLoginSrv.Dock = DockStyle.Fill;
-			        	this.panel2.Controls.Add(cLoginSrv);
-			        	break;
 					case ActiveNodeNames.AuthSearch:
 			        	controlPreferenciasAuthSearch cAuthS = new controlPreferenciasAuthSearch();
 			        	cAuthS.Dock = DockStyle.Fill;

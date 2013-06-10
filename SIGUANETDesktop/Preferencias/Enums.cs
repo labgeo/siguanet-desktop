@@ -23,7 +23,6 @@ namespace SIGUANETDesktop.Preferencias
 		AppName = 100L,
 		OrgName = 101L,
 		OrgAcronym = 102L,
-		LoginServiceURL = 110L,
 		AuthDownloadURL = 2000L,
 		AuthUseLocal = 2001L,
 		AuthUseRemote = 2002L,

@@ -36,22 +36,20 @@ namespace SIGUANETDesktop.GUI
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Control de acceso a SIGUANETDesktop");
-			System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Credenciales de acceso a BD");
-			System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Modelo de Documento");
-			System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("General", new System.Windows.Forms.TreeNode[] {
+			System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Credenciales de acceso a BD");
+			System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Modelo de Documento");
+			System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("General", new System.Windows.Forms.TreeNode[] {
 									treeNode1,
-									treeNode2,
-									treeNode3});
-			System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Consultas al catálogo interno");
-			System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("PostgreSQL", new System.Windows.Forms.TreeNode[] {
-									treeNode5});
-			System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Consultas al catálogo interno");
-			System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("ORACLE", new System.Windows.Forms.TreeNode[] {
+									treeNode2});
+			System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Consultas al catálogo interno");
+			System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("PostgreSQL", new System.Windows.Forms.TreeNode[] {
+									treeNode4});
+			System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Consultas al catálogo interno");
+			System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("ORACLE", new System.Windows.Forms.TreeNode[] {
+									treeNode6});
+			System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Base de datos", new System.Windows.Forms.TreeNode[] {
+									treeNode5,
 									treeNode7});
-			System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Base de datos", new System.Windows.Forms.TreeNode[] {
-									treeNode6,
-									treeNode8});
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.tvPreferencias = new System.Windows.Forms.TreeView();
 			this.panel2 = new System.Windows.Forms.Panel();
@@ -88,28 +86,26 @@ namespace SIGUANETDesktop.GUI
 			this.tvPreferencias.HideSelection = false;
 			this.tvPreferencias.Location = new System.Drawing.Point(0, 0);
 			this.tvPreferencias.Name = "tvPreferencias";
-			treeNode1.Name = "LoginService";
-			treeNode1.Text = "Control de acceso a SIGUANETDesktop";
-			treeNode2.Name = "AuthSearch";
-			treeNode2.Text = "Credenciales de acceso a BD";
-			treeNode3.Name = "SGDSearch";
-			treeNode3.Text = "Modelo de Documento";
-			treeNode4.Name = "General";
-			treeNode4.Tag = "";
-			treeNode4.Text = "General";
-			treeNode5.Name = "PGSQLSchemaQuery";
-			treeNode5.Text = "Consultas al catálogo interno";
-			treeNode6.Name = "PGSQL";
-			treeNode6.Text = "PostgreSQL";
-			treeNode7.Name = "ORASchemaQuery";
-			treeNode7.Text = "Consultas al catálogo interno";
-			treeNode8.Name = "ORA";
-			treeNode8.Text = "ORACLE";
-			treeNode9.Name = "BD";
-			treeNode9.Text = "Base de datos";
+			treeNode1.Name = "AuthSearch";
+			treeNode1.Text = "Credenciales de acceso a BD";
+			treeNode2.Name = "SGDSearch";
+			treeNode2.Text = "Modelo de Documento";
+			treeNode3.Name = "General";
+			treeNode3.Tag = "";
+			treeNode3.Text = "General";
+			treeNode4.Name = "PGSQLSchemaQuery";
+			treeNode4.Text = "Consultas al catálogo interno";
+			treeNode5.Name = "PGSQL";
+			treeNode5.Text = "PostgreSQL";
+			treeNode6.Name = "ORASchemaQuery";
+			treeNode6.Text = "Consultas al catálogo interno";
+			treeNode7.Name = "ORA";
+			treeNode7.Text = "ORACLE";
+			treeNode8.Name = "BD";
+			treeNode8.Text = "Base de datos";
 			this.tvPreferencias.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-									treeNode4,
-									treeNode9});
+									treeNode3,
+									treeNode8});
 			this.tvPreferencias.Size = new System.Drawing.Size(237, 455);
 			this.tvPreferencias.TabIndex = 0;
 			this.tvPreferencias.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TvPreferenciasNodeMouseClick);

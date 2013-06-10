@@ -79,10 +79,6 @@
     <Compile Include="GUI\controlUploadClient.Designer.cs">
       <DependentUpon>controlUploadClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\controlPreferenciasLoginService.cs" />
-    <Compile Include="GUI\controlPreferenciasLoginService.Designer.cs">
-      <DependentUpon>controlPreferenciasLoginService.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\controlProfileBrowser.cs" />
     <Compile Include="GUI\controlProfileBrowser.Designer.cs">
       <DependentUpon>controlProfileBrowser.cs</DependentUpon>
@@ -195,9 +191,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\controlPreferenciasAuthSearch.resx">
       <DependentUpon>controlPreferenciasAuthSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\controlPreferenciasLoginService.resx">
-      <DependentUpon>controlPreferenciasLoginService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\controlPreferenciasORASchemaQuery.resx">
       <DependentUpon>controlPreferenciasORASchemaQuery.cs</DependentUpon>
