@@ -148,5 +148,15 @@ namespace SIGUANETDesktop.DB
 					   _pgsqlpwd.Trim() != string.Empty;
 			}
 		}
+		
+		public static void Clear()
+		{
+			DBSettings.PGSQLHost = string.Empty;
+			DBSettings.PGSQLPort = 5432;
+			DBSettings.PGSQLDb = "siguanet";
+			DBSettings.PGSQLUsr = string.Empty;
+			DBSettings.PGSQLPwd = string.Empty;
+			DBSettings.PGSQLCmdTimeOut = 60;
+		}
 	}
 }

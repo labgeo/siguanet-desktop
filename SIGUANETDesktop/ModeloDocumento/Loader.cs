@@ -996,7 +996,7 @@ namespace SIGUANETDesktop.ModeloDocumento
 				//El usuario es Root SIEMPRE proporciona sus credenciales explícitamente
 				if (Loader._profile == ProfileType.Root)
 				{
-					//DO NOTHING
+					DBSettings.Clear();
 				}
 				else
 				{
