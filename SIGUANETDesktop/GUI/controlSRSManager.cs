@@ -93,7 +93,7 @@ namespace SIGUANETDesktop.GUI
 			try
 			{
 				bool checkCredentials = false;
-				if (this.txOrigen.Text.Trim() == RemoteSettings.GetDefaultRemoteLocation(ProfileType.Publico, Loader.Version))
+				if (this.txOrigen.Text.Trim() == RemoteSettings.GetDefaultRemoteLocation(ProfileType.Anonymous, Loader.Version))
 				{
 					checkCredentials = true;
 				}
@@ -140,7 +140,7 @@ namespace SIGUANETDesktop.GUI
 			switch (e.KeyData)
 			{
 				case ((Keys.Control | Keys.P)):
-					this.txOrigen.Text = RemoteSettings.GetDefaultRemoteLocation(ProfileType.Publico, Loader.Version);
+					this.txOrigen.Text = RemoteSettings.GetDefaultRemoteLocation(ProfileType.Anonymous, Loader.Version);
 					break;
 				case ((Keys.Control | Keys.I)):
 					this.txOrigen.Text = RemoteSettings.GetDefaultRemoteLocation(ProfileType.Interno, Loader.Version);

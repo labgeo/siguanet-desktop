@@ -54,14 +54,6 @@ namespace SIGUANETDesktop.GUI
 			this.splitContainer1.Panel2.Controls.Add(dlgSRS);
 		}
 		
-		void BPerfilesClick(object sender, EventArgs e)
-		{
-			this.splitContainer1.Panel2.Controls.Clear();
-			controlProfileBrowser dlgProfiles = new controlProfileBrowser();
-			dlgProfiles.Dock = DockStyle.Fill;
-			this.splitContainer1.Panel2.Controls.Add(dlgProfiles);
-		}
-		
 		void BHTTPPUTClick(object sender, EventArgs e)
 		{
 			this.splitContainer1.Panel2.Controls.Clear();

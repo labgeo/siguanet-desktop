@@ -123,7 +123,7 @@ namespace SIGUANETDesktop.ModeloDocumento
 			return sgd;
 		}
 		
-		private ProfileType _perfil = ProfileType.Publico;
+		private ProfileType _perfil = ProfileType.Anonymous;
 		[XmlAttribute]
 		public ProfileType Perfil
 		{

@@ -174,7 +174,7 @@ namespace SIGUANETDesktop.ModeloDocumento
 			}
 		}
 		
-		private static ProfileType _profile = ProfileType.Publico;
+		private static ProfileType _profile = ProfileType.Anonymous;
 		public static ProfileType Profile
 		{
 			get
@@ -207,7 +207,7 @@ namespace SIGUANETDesktop.ModeloDocumento
 		//Sólo invocando al método Impersonate se puede producir la impersonación efectiva,
 		//es decir
 		//(_impersonation == _profile) == false
-		private static ProfileType _impersonation = ProfileType.Publico;
+		private static ProfileType _impersonation = ProfileType.Anonymous;
 		public static ProfileType Impersonation
 		{
 			get
@@ -360,7 +360,7 @@ namespace SIGUANETDesktop.ModeloDocumento
 		{
 			IAuthResponse authResponse;
 			
-			profile = ProfileType.Publico;
+			profile = ProfileType.Anonymous;
 			customProfile = string.Empty;
 			isAuthenticated = false;
 			
@@ -382,7 +382,7 @@ namespace SIGUANETDesktop.ModeloDocumento
 				//previa a la carga del documento SGD ya que necesitamos dichas credenciales
 				//para realizar la autentificación mediante un NIF			
 				if (!bypassSRS) {
-					Loader.DoLoadSRS(ProfileType.Publico);
+					Loader.DoLoadSRS(ProfileType.Anonymous);
 				}
 				
 				//Autentificación de usuario
@@ -502,7 +502,7 @@ namespace SIGUANETDesktop.ModeloDocumento
 				httpUsr = AdministradorPreferencias.Read(PrefsGlobal.AuthDownloadWithLogin);
 				httpPwd = AdministradorPreferencias.Read(PrefsGlobal.AuthDownloadWithPassword);
 			}
-			source = Loader.GetAuthDownloadSource (authDownloadDir, httpUsr, httpPwd, ProfileType.Publico);
+			source = Loader.GetAuthDownloadSource (authDownloadDir, httpUsr, httpPwd, ProfileType.Anonymous);
 			if (source != string.Empty)
 			{
 				try
@@ -619,7 +619,7 @@ namespace SIGUANETDesktop.ModeloDocumento
 		//un perfil personalizado. De esta forma los administradores del sistema pueden
 		//preparar SGD de demo para usuarios externos que deseen
 		//hacer pruebas de funcionalidad de SIGUANETDesktop temporalmente,
-		//sin ser dicha funcionalidad propia del perfil Publico. 
+		//sin ser dicha funcionalidad propia del perfil Anonymous. 
 		//A estos usuarios externos bastará con comunicarles vía e-mail
 		//o por otros medios el nombre de su perfil personalizado.
 		public static void SetCustomProfile(string customProfile)
@@ -653,11 +653,11 @@ namespace SIGUANETDesktop.ModeloDocumento
 			
 			if (Loader._useLocal)
 			{
-				sgd = (Loader._profile == ProfileType.Publico) ? Loader.LoadSGD(Loader._localOnlyPublicSGDRules) : Loader.LoadSGD(Loader._localOnlySGDRules);
+				sgd = (Loader._profile == ProfileType.Anonymous) ? Loader.LoadSGD(Loader._localOnlyPublicSGDRules) : Loader.LoadSGD(Loader._localOnlySGDRules);
 			}
 			if (Loader._useRemote)
 			{
-				if (Loader._profile == ProfileType.Publico && Loader._customProfile == string.Empty)
+				if (Loader._profile == ProfileType.Anonymous && Loader._customProfile == string.Empty)
 				{
 					sgd = Loader._useLocalCopy ? Loader.LoadSGD(Loader._remoteOrLocalPublicSGDRules) : Loader.LoadSGD(Loader._remoteOnlyPublicSGDRules);
 				}
@@ -682,7 +682,7 @@ namespace SIGUANETDesktop.ModeloDocumento
 			{
 				foreach (LoaderRule rule in rules)
 				{
-					ProfileType p = rule.ForcePublic ? ProfileType.Publico : Loader._profile;
+					ProfileType p = rule.ForcePublic ? ProfileType.Anonymous : Loader._profile;
 					string custom = rule.ForcePublic ? string.Empty : Loader._customProfile;
 					sgd = rule.UseLocal ? Loader.LoadLocalSGD(p, custom) : Loader.LoadRemoteSGD(p, custom);
 					if (sgd != null)
@@ -709,7 +709,7 @@ namespace SIGUANETDesktop.ModeloDocumento
 			}
 			foreach (LoaderRule rule in rules)
 			{
-				ProfileType p = rule.ForcePublic ? ProfileType.Publico : Loader._impersonation;
+				ProfileType p = rule.ForcePublic ? ProfileType.Anonymous : Loader._impersonation;
 				string custom = rule.ForcePublic ? string.Empty : Loader._customImpersonation;
 				sgd = rule.UseLocal ? Loader.LoadLocalSGD(p, custom) : Loader.LoadRemoteSGD(p, custom);
 				if (sgd != null)
@@ -1073,8 +1073,8 @@ namespace SIGUANETDesktop.ModeloDocumento
 				catch(Exception innerE)
 				{
 					new SIGUANETDesktopException(ExceptionCategory.SRSDeserializationFailed, "Loader.DoLoadSRSLocalCopy", innerE, target);
-					//Intentamos instanciar el documento SRS desde una copia del perfil Publico en la fuente local
-					if (Loader._profile != ProfileType.Publico)
+					//Intentamos instanciar el documento SRS desde una copia del perfil Anonymous en la fuente local
+					if (Loader._profile != ProfileType.Anonymous)
 					{
 						Loader.ForceLoadPublicSRSLocalCopy();
 					}
@@ -1083,8 +1083,8 @@ namespace SIGUANETDesktop.ModeloDocumento
 			else
 			{
 				new SIGUANETDesktopException(ExceptionCategory.SRSLocalPathNotFound, "Loader.DoLoadSRSLocalCopy", new FileNotFoundException(), target);
-				//Intentamos instanciar el documento SRS desde una copia del perfil Publico en la fuente local
-				if (Loader._profile != ProfileType.Publico)
+				//Intentamos instanciar el documento SRS desde una copia del perfil Anonymous en la fuente local
+				if (Loader._profile != ProfileType.Anonymous)
 				{
 					Loader.ForceLoadPublicSRSLocalCopy();
 				}
@@ -1093,7 +1093,7 @@ namespace SIGUANETDesktop.ModeloDocumento
 		
 		private static void ForceLoadPublicSRSLocalCopy()
 		{
-			string target = RemoteSettings.GetDefaultLocation(ProfileType.Publico, Loader._version);
+			string target = RemoteSettings.GetDefaultLocation(ProfileType.Anonymous, Loader._version);
 			if (File.Exists(target))
 			{
 				try

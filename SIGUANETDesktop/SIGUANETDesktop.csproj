@@ -79,10 +79,6 @@
     <Compile Include="GUI\controlUploadClient.Designer.cs">
       <DependentUpon>controlUploadClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\controlProfileBrowser.cs" />
-    <Compile Include="GUI\controlProfileBrowser.Designer.cs">
-      <DependentUpon>controlProfileBrowser.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\controlSGDUploadManager.cs" />
     <Compile Include="GUI\controlSGDUploadManager.Designer.cs">
       <DependentUpon>controlSGDUploadManager.cs</DependentUpon>
@@ -200,9 +196,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\controlPreferenciasSGDSearch.resx">
       <DependentUpon>controlPreferenciasSGDSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\controlProfileBrowser.resx">
-      <DependentUpon>controlProfileBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\controlSGDManager.resx">
       <DependentUpon>controlSGDManager.cs</DependentUpon>
@@ -372,10 +365,6 @@
       <DependentUpon>controlCmdComparar.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Perfiles\Enums.cs" />
-    <Compile Include="Perfiles\ObjectFactory.cs" />
-    <Compile Include="Perfiles\Profile.cs" />
-    <Compile Include="Perfiles\UserProfile.cs" />
-    <Compile Include="Perfiles\UserProfileQuery.cs" />
     <Compile Include="Preferencias\AdministradorPreferencias.cs" />
     <Compile Include="Preferencias\Enums.cs" />
     <Compile Include="Preferencias\Preferencias.cs" />

@@ -42,7 +42,6 @@ namespace SIGUANETDesktop.GUI
 			this.bSGD = new System.Windows.Forms.ToolStripButton();
 			this.bSGDUpload = new System.Windows.Forms.ToolStripButton();
 			this.bSRS = new System.Windows.Forms.ToolStripButton();
-			this.bPerfiles = new System.Windows.Forms.ToolStripButton();
 			this.bUpload = new System.Windows.Forms.ToolStripButton();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
@@ -69,7 +68,6 @@ namespace SIGUANETDesktop.GUI
 									this.bSGD,
 									this.bSGDUpload,
 									this.bSRS,
-									this.bPerfiles,
 									this.bUpload});
 			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -110,16 +108,6 @@ namespace SIGUANETDesktop.GUI
 			this.bSRS.ToolTipText = "Gestor de ajustes remotos SIGUANETDesktop";
 			this.bSRS.Click += new System.EventHandler(this.BSRSClick);
 			// 
-			// bPerfiles
-			// 
-			this.bPerfiles.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-			this.bPerfiles.Image = ((System.Drawing.Image)(resources.GetObject("bPerfiles.Image")));
-			this.bPerfiles.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.bPerfiles.Name = "bPerfiles";
-			this.bPerfiles.Size = new System.Drawing.Size(122, 17);
-			this.bPerfiles.Text = "Buscador de perfiles";
-			this.bPerfiles.Click += new System.EventHandler(this.BPerfilesClick);
-			// 
 			// bUpload
 			// 
 			this.bUpload.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -146,7 +134,6 @@ namespace SIGUANETDesktop.GUI
 		}
 		private System.Windows.Forms.ToolStripButton bUpload;
 		private System.Windows.Forms.ToolStripButton bSGDUpload;
-		private System.Windows.Forms.ToolStripButton bPerfiles;
 		private System.Windows.Forms.ToolStripButton bSGD;
 		private System.Windows.Forms.ToolStripButton bSRS;
 		private System.Windows.Forms.ToolStrip toolStrip1;

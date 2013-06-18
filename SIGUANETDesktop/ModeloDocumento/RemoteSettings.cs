@@ -186,7 +186,7 @@ namespace SIGUANETDesktop.ModeloDocumento
 			}
 		}
 		
-		private  string _perfil = ProfileType.Publico.ToString();
+		private  string _perfil = ProfileType.Anonymous.ToString();
 		[XmlElement("E7")]
 		public  string Perfil
 		{

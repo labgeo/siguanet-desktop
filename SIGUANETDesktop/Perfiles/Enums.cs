@@ -13,7 +13,7 @@ namespace SIGUANETDesktop.Perfiles
 {
 	public enum ProfileType : long
 	{
-		Publico = 1000L,
+		Anonymous = 1000L,
 		Interno = 2000L, //Empleados
 		Departamento = 3000L, //Gestores de departamento o unidad
 		Administrador = 4000L, //responsables de infraestructuras, gerencia, otros cargos
