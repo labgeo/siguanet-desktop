@@ -29,29 +29,29 @@ namespace SIGUANETDesktop
 		//rules[i,2] = new perfilUsuario[] {p1, ..., pn}
 		private static object[,] _rules = new object[,]
 		{
-			{"MainForm", "mitemGuardarComo", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemPerfil", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemORA", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemVEsquemasBD", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevo", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemAbrir", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemGuardar", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemGuardarComo", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevoArbEspacial", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevoArbUEM", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevoArbOrganizativo", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevoArbUsos", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevoArbUsosG", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevoArbUsosGCRUE", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevoArbUsosGU21", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevoPAccCampus", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevoPAccEdificios", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevoPAccPlantas", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevoPAccEstancias", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevoPAccDepartamentos", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevoPAccUsos", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemNuevoPAccPersonas", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}},
-			{"MainForm", "mitemEliminarPuntoAcceso", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}}
+			{"MainForm", "mitemGuardarComo", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemPerfil", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemORA", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemVEsquemasBD", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevo", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemAbrir", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemGuardar", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemGuardarComo", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevoArbEspacial", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevoArbUEM", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevoArbOrganizativo", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevoArbUsos", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevoArbUsosG", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevoArbUsosGCRUE", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevoArbUsosGU21", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevoPAccCampus", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevoPAccEdificios", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevoPAccPlantas", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevoPAccEstancias", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevoPAccDepartamentos", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevoPAccUsos", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemNuevoPAccPersonas", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
+			{"MainForm", "mitemEliminarPuntoAcceso", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}}
 		};
 		
 		//Array auxiliar para la predefinición más cómoda de las reglas con excepción
@@ -81,10 +81,10 @@ namespace SIGUANETDesktop
 		//a dicho tipo de delegado
 		private static object[,] _rulesOverridable = new object[,]
 		{
-			{"MainForm", "mitemPGSQL", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador}, (BooleanExpressionDelegate) delegate{return Loader.SRS == null;}},
-			{"MainForm", "tstxPerfilCustom", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador, ProfileType.Root}, (BooleanExpressionDelegate) delegate{return Loader.CustomProfile != string.Empty;}},
-			{"MainForm", "tssbImpersonacion", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador, ProfileType.Root}, (BooleanExpressionDelegate) delegate{return Loader.IsImpersonated == true;}},
-			{"MainForm", "tstxImpersonacionCustom", new ProfileType[] {ProfileType.Anonymous, ProfileType.Interno, ProfileType.Departamento, ProfileType.Administrador, ProfileType.Root}, (BooleanExpressionDelegate) delegate{return Loader.CustomImpersonation != string.Empty;}}
+			{"MainForm", "mitemPGSQL", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}, (BooleanExpressionDelegate) delegate{return Loader.SRS == null;}},
+			{"MainForm", "tstxPerfilCustom", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager, ProfileType.Root}, (BooleanExpressionDelegate) delegate{return Loader.CustomProfile != string.Empty;}},
+			{"MainForm", "tssbImpersonacion", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager, ProfileType.Root}, (BooleanExpressionDelegate) delegate{return Loader.IsImpersonated == true;}},
+			{"MainForm", "tstxImpersonacionCustom", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager, ProfileType.Root}, (BooleanExpressionDelegate) delegate{return Loader.CustomImpersonation != string.Empty;}}
 		};
 		
 		private static Collection<GUIRule> _guiRules = new Collection<GUIRule>();

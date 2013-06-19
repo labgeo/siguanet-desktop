@@ -105,15 +105,11 @@ namespace SIGUANETDesktop.GUI
 				{
 					checkCredentials = true;
 				}
-				else if (this.txOrigen.Text.Trim() == RemoteSettings.GetDefaultRemoteLocation(ProfileType.Interno, Loader.Version))
+				else if (this.txOrigen.Text.Trim() == RemoteSettings.GetDefaultRemoteLocation(ProfileType.Normal, Loader.Version))
 				{
 					checkCredentials = true;
 				}
-				else if (this.txOrigen.Text.Trim() == RemoteSettings.GetDefaultRemoteLocation(ProfileType.Departamento, Loader.Version))
-				{
-					checkCredentials = true;
-				}
-				else if (this.txOrigen.Text.Trim() == RemoteSettings.GetDefaultRemoteLocation(ProfileType.Administrador, Loader.Version))
+				else if (this.txOrigen.Text.Trim() == RemoteSettings.GetDefaultRemoteLocation(ProfileType.Manager, Loader.Version))
 				{
 					checkCredentials = true;
 				}
@@ -147,17 +143,14 @@ namespace SIGUANETDesktop.GUI
 		{
 			switch (e.KeyData)
 			{
-				case ((Keys.Control | Keys.P)):
+				case ((Keys.Control | Keys.A)):
 					this.txOrigen.Text = Root.GetDefaultRemoteLocation(ProfileType.Anonymous, string.Empty, Loader.Version);
 					break;
-				case ((Keys.Control | Keys.I)):
-					this.txOrigen.Text = Root.GetDefaultRemoteLocation(ProfileType.Interno, string.Empty, Loader.Version);
+				case ((Keys.Control | Keys.N)):
+					this.txOrigen.Text = Root.GetDefaultRemoteLocation(ProfileType.Normal, string.Empty, Loader.Version);
 					break;
-				case ((Keys.Control | Keys.D)):
-					this.txOrigen.Text = Root.GetDefaultRemoteLocation(ProfileType.Departamento, string.Empty, Loader.Version);
-					break;
-				case ((Keys.Control | Keys.A)):
-					this.txOrigen.Text = Root.GetDefaultRemoteLocation(ProfileType.Administrador, string.Empty, Loader.Version);
+				case ((Keys.Control | Keys.M)):
+					this.txOrigen.Text = Root.GetDefaultRemoteLocation(ProfileType.Manager, string.Empty, Loader.Version);
 					break;
 				case ((Keys.Control | Keys.R)):
 					this.txOrigen.Text = Root.GetDefaultRemoteLocation(ProfileType.Root, string.Empty, Loader.Version);

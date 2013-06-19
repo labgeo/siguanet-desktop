@@ -50,7 +50,7 @@ namespace SIGUANETDesktop.ModeloDocumento
 		string GetProfile (string id)
 		{
 			string sCn = DBUtils.GetPGSQLCnString();
-			string sSQL = "SELECT COALESCE(perfil, 'INTERNO') FROM personal WHERE upper(nif) = :param1;";
+			string sSQL = "SELECT COALESCE(perfil, 'NORMAL') FROM personal WHERE upper(nif) = :param1;";
 			using (NpgsqlConnection pgCn = new NpgsqlConnection(sCn)) {
 				pgCn.Open();
 				using (NpgsqlCommand pgCmd = new NpgsqlCommand(sSQL, pgCn)) {

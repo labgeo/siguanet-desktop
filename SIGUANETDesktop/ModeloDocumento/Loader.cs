@@ -404,7 +404,7 @@ namespace SIGUANETDesktop.ModeloDocumento
 					{
 						//Intentamos lanzar el evento MultipleProfileEvent en caso
 						//de haber recibido múltiples perfiles, como por ejemplo:
-						//"DEPARTAMENTO,INTERNO.PERSONALIZADO". Esperamos 
+						//"MANAGER,NORMAL.CUSTOM". Esperamos 
 						//el caracter ',' como separador de lista
 						if ((r as string).Split(',').Length > 1)
 						{
