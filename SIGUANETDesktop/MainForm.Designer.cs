@@ -95,19 +95,11 @@ namespace SIGUANETDesktop
 			this.mitemEliminarComando = new System.Windows.Forms.ToolStripMenuItem();
 			this.mPuntosAcceso = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.mitemNuevoArbEspacial = new System.Windows.Forms.ToolStripMenuItem();
-			this.mitemNuevoArbUEM = new System.Windows.Forms.ToolStripMenuItem();
 			this.mitemNuevoArbOrganizativo = new System.Windows.Forms.ToolStripMenuItem();
 			this.mitemNuevoArbUsos = new System.Windows.Forms.ToolStripMenuItem();
 			this.mitemNuevoArbUsosG = new System.Windows.Forms.ToolStripMenuItem();
 			this.mitemNuevoArbUsosGCRUE = new System.Windows.Forms.ToolStripMenuItem();
 			this.mitemNuevoArbUsosGU21 = new System.Windows.Forms.ToolStripMenuItem();
-			this.mitemNuevoPAccCampus = new System.Windows.Forms.ToolStripMenuItem();
-			this.mitemNuevoPAccEdificios = new System.Windows.Forms.ToolStripMenuItem();
-			this.mitemNuevoPAccPlantas = new System.Windows.Forms.ToolStripMenuItem();
-			this.mitemNuevoPAccEstancias = new System.Windows.Forms.ToolStripMenuItem();
-			this.mitemNuevoPAccDepartamentos = new System.Windows.Forms.ToolStripMenuItem();
-			this.mitemNuevoPAccUsos = new System.Windows.Forms.ToolStripMenuItem();
-			this.mitemNuevoPAccPersonas = new System.Windows.Forms.ToolStripMenuItem();
 			this.mSesionSincro = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.mitemAutoSincro = new System.Windows.Forms.ToolStripMenuItem();
 			this.mSesionSOAP = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -222,28 +214,28 @@ namespace SIGUANETDesktop
 			// mitemPerfil
 			// 
 			this.mitemPerfil.Name = "mitemPerfil";
-			this.mitemPerfil.Size = new System.Drawing.Size(231, 22);
+			this.mitemPerfil.Size = new System.Drawing.Size(250, 22);
 			this.mitemPerfil.Text = "Perfil de usuario";
 			this.mitemPerfil.Click += new System.EventHandler(this.MitemPerfilClick);
 			// 
 			// mitemPGSQL
 			// 
 			this.mitemPGSQL.Name = "mitemPGSQL";
-			this.mitemPGSQL.Size = new System.Drawing.Size(231, 22);
+			this.mitemPGSQL.Size = new System.Drawing.Size(250, 22);
 			this.mitemPGSQL.Text = "Conexión SIGUANET (PostgreSQL)";
 			this.mitemPGSQL.Click += new System.EventHandler(this.MitemPGSQLClick);
 			// 
 			// mitemORA
 			// 
 			this.mitemORA.Name = "mitemORA";
-			this.mitemORA.Size = new System.Drawing.Size(231, 22);
+			this.mitemORA.Size = new System.Drawing.Size(250, 22);
 			this.mitemORA.Text = "Conexión CPD (Oracle)";
 			this.mitemORA.Click += new System.EventHandler(this.MitemORAClick);
 			// 
 			// mitemSOAP
 			// 
 			this.mitemSOAP.Name = "mitemSOAP";
-			this.mitemSOAP.Size = new System.Drawing.Size(231, 22);
+			this.mitemSOAP.Size = new System.Drawing.Size(250, 22);
 			this.mitemSOAP.Text = "Conexión SOAP";
 			this.mitemSOAP.Click += new System.EventHandler(this.MitemSOAPClick);
 			// 
@@ -571,21 +563,13 @@ namespace SIGUANETDesktop
 			// 
 			this.mPuntosAcceso.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.mitemNuevoArbEspacial,
-									this.mitemNuevoArbUEM,
 									this.mitemNuevoArbOrganizativo,
 									this.mitemNuevoArbUsos,
 									this.mitemNuevoArbUsosG,
 									this.mitemNuevoArbUsosGCRUE,
-									this.mitemNuevoArbUsosGU21,
-									this.mitemNuevoPAccCampus,
-									this.mitemNuevoPAccEdificios,
-									this.mitemNuevoPAccPlantas,
-									this.mitemNuevoPAccEstancias,
-									this.mitemNuevoPAccDepartamentos,
-									this.mitemNuevoPAccUsos,
-									this.mitemNuevoPAccPersonas});
+									this.mitemNuevoArbUsosGU21});
 			this.mPuntosAcceso.Name = "mSesion";
-			this.mPuntosAcceso.Size = new System.Drawing.Size(267, 312);
+			this.mPuntosAcceso.Size = new System.Drawing.Size(267, 158);
 			this.mPuntosAcceso.Opening += new System.ComponentModel.CancelEventHandler(this.MPuntosAccesoOpening);
 			// 
 			// mitemNuevoArbEspacial
@@ -594,13 +578,6 @@ namespace SIGUANETDesktop
 			this.mitemNuevoArbEspacial.Size = new System.Drawing.Size(266, 22);
 			this.mitemNuevoArbEspacial.Text = "Nuevo Árbol de Espacios ";
 			this.mitemNuevoArbEspacial.Click += new System.EventHandler(this.MitemNuevoArbEspacialClick);
-			// 
-			// mitemNuevoArbUEM
-			// 
-			this.mitemNuevoArbUEM.Name = "mitemNuevoArbUEM";
-			this.mitemNuevoArbUEM.Size = new System.Drawing.Size(266, 22);
-			this.mitemNuevoArbUEM.Text = "Nuevo Árbol de Consulta Espacial";
-			this.mitemNuevoArbUEM.Click += new System.EventHandler(this.MitemNuevoArbUEMClick);
 			// 
 			// mitemNuevoArbOrganizativo
 			// 
@@ -636,55 +613,6 @@ namespace SIGUANETDesktop
 			this.mitemNuevoArbUsosGU21.Size = new System.Drawing.Size(266, 22);
 			this.mitemNuevoArbUsosGU21.Text = "Nuevo árbol de Usos (grupos UXXI)";
 			this.mitemNuevoArbUsosGU21.Click += new System.EventHandler(this.MitemNuevoArbUsosGU21Click);
-			// 
-			// mitemNuevoPAccCampus
-			// 
-			this.mitemNuevoPAccCampus.Name = "mitemNuevoPAccCampus";
-			this.mitemNuevoPAccCampus.Size = new System.Drawing.Size(266, 22);
-			this.mitemNuevoPAccCampus.Text = "Nuevo Punto de Acceso de Campus";
-			this.mitemNuevoPAccCampus.Click += new System.EventHandler(this.MitemNuevoPAccCampusClick);
-			// 
-			// mitemNuevoPAccEdificios
-			// 
-			this.mitemNuevoPAccEdificios.Name = "mitemNuevoPAccEdificios";
-			this.mitemNuevoPAccEdificios.Size = new System.Drawing.Size(266, 22);
-			this.mitemNuevoPAccEdificios.Text = "Nuevo Punto de Acceso de Edificios";
-			this.mitemNuevoPAccEdificios.Click += new System.EventHandler(this.MitemNuevoPAccEdificiosClick);
-			// 
-			// mitemNuevoPAccPlantas
-			// 
-			this.mitemNuevoPAccPlantas.Name = "mitemNuevoPAccPlantas";
-			this.mitemNuevoPAccPlantas.Size = new System.Drawing.Size(266, 22);
-			this.mitemNuevoPAccPlantas.Text = "Nuevo Punto de Acceso de Plantas de Edificio";
-			this.mitemNuevoPAccPlantas.Click += new System.EventHandler(this.MitemNuevoPAccPlantasClick);
-			// 
-			// mitemNuevoPAccEstancias
-			// 
-			this.mitemNuevoPAccEstancias.Name = "mitemNuevoPAccEstancias";
-			this.mitemNuevoPAccEstancias.Size = new System.Drawing.Size(266, 22);
-			this.mitemNuevoPAccEstancias.Text = "Nuevo Punto de Acceso de Estancias";
-			this.mitemNuevoPAccEstancias.Click += new System.EventHandler(this.MitemNuevoPAccEstanciasClick);
-			// 
-			// mitemNuevoPAccDepartamentos
-			// 
-			this.mitemNuevoPAccDepartamentos.Name = "mitemNuevoPAccDepartamentos";
-			this.mitemNuevoPAccDepartamentos.Size = new System.Drawing.Size(266, 22);
-			this.mitemNuevoPAccDepartamentos.Text = "Nuevo Punto de Acceso de Departamentos";
-			this.mitemNuevoPAccDepartamentos.Click += new System.EventHandler(this.MitemNuevoPAccDepartamentosClick);
-			// 
-			// mitemNuevoPAccUsos
-			// 
-			this.mitemNuevoPAccUsos.Name = "mitemNuevoPAccUsos";
-			this.mitemNuevoPAccUsos.Size = new System.Drawing.Size(266, 22);
-			this.mitemNuevoPAccUsos.Text = "Nuevo Punto de Acceso de Usos";
-			this.mitemNuevoPAccUsos.Click += new System.EventHandler(this.MitemNuevoPAccUsosClick);
-			// 
-			// mitemNuevoPAccPersonas
-			// 
-			this.mitemNuevoPAccPersonas.Name = "mitemNuevoPAccPersonas";
-			this.mitemNuevoPAccPersonas.Size = new System.Drawing.Size(266, 22);
-			this.mitemNuevoPAccPersonas.Text = "Nuevo Punto de Acceso de Personal";
-			this.mitemNuevoPAccPersonas.Click += new System.EventHandler(this.MitemNuevoPAccPersonasClick);
 			// 
 			// mSesionSincro
 			// 
@@ -908,7 +836,6 @@ namespace SIGUANETDesktop
 		private System.Windows.Forms.ToolStripMenuItem mitemSOAP;
 		private System.Windows.Forms.ToolStripMenuItem mitemNuevoArbEspacial;
 		private System.Windows.Forms.ToolStripMenuItem mitemNuevoArbUsos;
-		private System.Windows.Forms.ToolStripMenuItem mitemNuevoArbUEM;
 		private System.Windows.Forms.ToolStripMenuItem mitemNuevoArbOrganizativo;
 		private System.Windows.Forms.ToolStripMenuItem mitemSimularComando;
 		private System.Windows.Forms.ToolStripMenuItem mitemNuevoCmdModificar;
@@ -918,13 +845,6 @@ namespace SIGUANETDesktop
 		private System.Windows.Forms.ToolStripMenuItem mitemNuevoCmdEdicion;
 		private System.Windows.Forms.ToolStripMenuItem mitemNuevoCmdDarBajas;
 		private System.Windows.Forms.ToolStripMenuItem mitemNuevoCmdDarAltas;
-		private System.Windows.Forms.ToolStripMenuItem mitemNuevoPAccEstancias;
-		private System.Windows.Forms.ToolStripMenuItem mitemNuevoPAccPlantas;
-		private System.Windows.Forms.ToolStripMenuItem mitemNuevoPAccEdificios;
-		private System.Windows.Forms.ToolStripMenuItem mitemNuevoPAccCampus;
-		private System.Windows.Forms.ToolStripMenuItem mitemNuevoPAccDepartamentos;
-		private System.Windows.Forms.ToolStripMenuItem mitemNuevoPAccPersonas;
-		private System.Windows.Forms.ToolStripMenuItem mitemNuevoPAccUsos;
 		private System.Windows.Forms.ContextMenuStrip mPuntosAcceso;
 		private System.Windows.Forms.TreeView tvDoc;
 		private System.Windows.Forms.ToolStripMenuItem mitemEliminarComando;

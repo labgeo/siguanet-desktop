@@ -1160,9 +1160,6 @@ namespace SIGUANETDesktop
 						case (tipoPuntoAcceso.ArbolEspacial):
 							this.mitemNuevoArbEspacial.Enabled = false;
 							break;
-						case (tipoPuntoAcceso.ArbolUEM):
-							this.mitemNuevoArbUEM.Enabled = false;
-							break;
 						case (tipoPuntoAcceso.ArbolOrganizativo):
 							this.mitemNuevoArbOrganizativo.Enabled = false;
 							break;
@@ -1178,27 +1175,6 @@ namespace SIGUANETDesktop
 						case (tipoPuntoAcceso.ArbolGruposActividadU21):
 							this.mitemNuevoArbUsosGU21.Enabled = false;
 							break;
-						case (tipoPuntoAcceso.Campus):
-							this.mitemNuevoPAccCampus.Enabled = false;
-							break;
-						case (tipoPuntoAcceso.Edificios):
-							this.mitemNuevoPAccEdificios.Enabled = false;
-							break;
-						case (tipoPuntoAcceso.Plantas):
-							this.mitemNuevoPAccPlantas.Enabled = false;
-							break;
-						case (tipoPuntoAcceso.Estancias):
-							this.mitemNuevoPAccEstancias.Enabled = false;
-							break;
-						case (tipoPuntoAcceso.Usos):
-							this.mitemNuevoPAccUsos.Enabled = false;
-							break;
-						case (tipoPuntoAcceso.Personas):
-							this.mitemNuevoPAccPersonas.Enabled = false;
-							break;
-						case (tipoPuntoAcceso.Departamentos):
-							this.mitemNuevoPAccDepartamentos.Enabled = false;
-							break;							
 					}
 				}
 			}

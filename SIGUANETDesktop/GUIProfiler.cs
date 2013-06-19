@@ -38,19 +38,11 @@ namespace SIGUANETDesktop
 			{"MainForm", "mitemGuardar", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
 			{"MainForm", "mitemGuardarComo", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
 			{"MainForm", "mitemNuevoArbEspacial", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
-			{"MainForm", "mitemNuevoArbUEM", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
 			{"MainForm", "mitemNuevoArbOrganizativo", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
 			{"MainForm", "mitemNuevoArbUsos", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
 			{"MainForm", "mitemNuevoArbUsosG", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
 			{"MainForm", "mitemNuevoArbUsosGCRUE", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
 			{"MainForm", "mitemNuevoArbUsosGU21", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
-			{"MainForm", "mitemNuevoPAccCampus", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
-			{"MainForm", "mitemNuevoPAccEdificios", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
-			{"MainForm", "mitemNuevoPAccPlantas", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
-			{"MainForm", "mitemNuevoPAccEstancias", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
-			{"MainForm", "mitemNuevoPAccDepartamentos", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
-			{"MainForm", "mitemNuevoPAccUsos", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
-			{"MainForm", "mitemNuevoPAccPersonas", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}},
 			{"MainForm", "mitemEliminarPuntoAcceso", new ProfileType[] {ProfileType.Anonymous, ProfileType.Normal, ProfileType.Manager}}
 		};
 		
