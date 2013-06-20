@@ -1,7 +1,7 @@
 siguanet-desktop
 ================
 
-SIGUANET desktop application for Windows that provides a set of query, reporting, mapping and administration tools, including a hierarchically organized interface to `siguanet_quest` PostgreSQL extension.
+SIGUANET desktop application for Windows that provides a set of query, reporting, mapping and administration tools, including a hierarchically organized interface to *siguanet_quest* PostgreSQL extension.
 
 ## What's SIGUANET?
 SIGUANET is a free software project that aims to share the University of Alicante's corporate built asset management technology (SIGUA) with the developers community.
@@ -39,4 +39,4 @@ A working SIGUANET database is needed which meets the following requirements:
 * Oracle Instant Client and the corresponding TNSNAMES.ora configuration file are needed for running the ORACLE to SIGUANET bridge
 
 ## How to build and deploy
-You can manually build  *siguanet-desktop* using SharpDevelop 2.2 and the provided SIGUANETDesktop/SIGUANETDesktop.sln solution file. If you want to distribute `siguanet-desktop` for general use inside your organization, please have a look at the project's Wiki for information on configuration files and add-ins you should include in your build and detailed instructions on other required remote resources. For a typical setup (that targeted to a non system administrator who won't be using the ORACLE to SIGUANET bridge), `siguanet-desktop` can be deployed as a bundle of binaries and configuration files suitable for simple XCOPY install on Windows systems where .NET framework 2.0 is already installed.
+You can manually build  *siguanet-desktop* using SharpDevelop 2.2 and the provided SIGUANETDesktop/SIGUANETDesktop.sln solution file. If you want to distribute *siguanet-desktop* for general use inside your organization, please have a look at the project's Wiki for information on configuration files and add-ins you should include in your build and detailed instructions on other required remote resources. For a typical setup (that targeted to a non system administrator who won't be using the ORACLE to SIGUANET bridge), *siguanet-desktop* can be deployed as a bundle of binaries and configuration files suitable for simple XCOPY install on Windows systems where .NET framework 2.0 is already installed.
