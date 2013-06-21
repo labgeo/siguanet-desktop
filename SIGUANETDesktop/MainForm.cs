@@ -657,7 +657,7 @@ namespace SIGUANETDesktop
 						this.MostrarDialogo(dlgses);
 						break;
 					case "SesionSOAP":
-						SesionSOAP sesSOAP = (SesionSOAP) nodoActivo.Tag;
+						SoapClient sesSOAP = (SoapClient) nodoActivo.Tag;
 						if (sesSOAP.Estado == EstadoSesionSOAP.NoIniciada)
 						{
 							try
@@ -691,11 +691,11 @@ namespace SIGUANETDesktop
 						SOAPServiceInfo soap;
 						if (!GUISettings.UseSOAPGroups)
 						{
-							soap = (nodoActivo.Parent.Parent.Tag as SesionSOAP).ServiceInfo;
+							soap = (nodoActivo.Parent.Parent.Tag as SoapClient).ServiceInfo;
 						}
 						else
 						{
-							soap = (nodoActivo.Parent.Parent.Parent.Tag as SesionSOAP).ServiceInfo;
+							soap = (nodoActivo.Parent.Parent.Parent.Tag as SoapClient).ServiceInfo;
 						}
 						
 						SOAPMethodInfo m = (SOAPMethodInfo) nodoActivo.Tag;
@@ -1650,7 +1650,7 @@ namespace SIGUANETDesktop
 		{
 			nodoActivo.Nodes.Clear();
 			this.MostrarDialogo(null);
-			SesionSOAP sesSOAP = (SesionSOAP) nodoActivo.Tag;
+			SoapClient sesSOAP = (SoapClient) nodoActivo.Tag;
 			try
 			{
 				sesSOAP.IniciarSesion(true);
@@ -1669,7 +1669,7 @@ namespace SIGUANETDesktop
 		
 		void MitemTestSOAPClick(object sender, System.EventArgs e)
 		{
-			Form w = new frmTestSOAP((nodoActivo.Tag as SesionSOAP).ServiceInfo);
+			Form w = new frmTestSOAP((nodoActivo.Tag as SoapClient).ServiceInfo);
 			w.ShowDialog(this);
 		}
 		

@@ -41,7 +41,7 @@ namespace SIGUANETDesktop.GUI
 			n0.Text = doc.Nombre;
 			if (doc.Quest != null && doc.Quest.Enabled) n0.Nodes.Add(CrearNodoSesionExplotacion(doc.Quest));
 			if (doc.Sincronizacion != null && doc.Sincronizacion.Enabled) n0.Nodes.Add(CrearNodoSesionSinc(doc.Sincronizacion));
-			if (doc.CliSOAP != null && doc.CliSOAP.Enabled) n0.Nodes.Add(CrearNodoSesionSOAP(doc.CliSOAP));
+			if (doc.Soap != null && doc.Soap.Enabled) n0.Nodes.Add(CrearNodoSesionSOAP(doc.Soap));
 			if (doc.CliSQL != null && doc.CliSQL.Enabled) n0.Nodes.Add(CrearNodoSesionSQL(doc.CliSQL));
 			if (doc.ATools != null && doc.ATools.Enabled) n0.Nodes.Add(CrearNodoSesionAT(doc.ATools));
 			return n0;
@@ -60,7 +60,7 @@ namespace SIGUANETDesktop.GUI
 			n0.Text = doc.Nombre;
 			if (doc.Quest != null && doc.Quest.Enabled) n0.Nodes.Add(CrearNodoSesionExplotacion(doc.Quest));
 			if (doc.Sincronizacion != null && doc.Sincronizacion.Enabled) n0.Nodes.Add(CrearNodoSesionSinc(doc.Sincronizacion));
-			if (doc.CliSOAP != null && doc.CliSOAP.Enabled) n0.Nodes.Add(CrearNodoSesionSOAP(doc.CliSOAP));
+			if (doc.Soap != null && doc.Soap.Enabled) n0.Nodes.Add(CrearNodoSesionSOAP(doc.Soap));
 			if (doc.CliSQL != null && doc.CliSQL.Enabled) n0.Nodes.Add(CrearNodoSesionSQL(doc.CliSQL));
 			if (!forceATools)
 			{
@@ -285,7 +285,7 @@ namespace SIGUANETDesktop.GUI
 			return nodes.ToArray();
 		}
 		
-		public static TreeNode CrearNodoSesionSOAP(SesionSOAP s)
+		public static TreeNode CrearNodoSesionSOAP(SoapClient s)
 		{
 			TreeNode n0;
 			

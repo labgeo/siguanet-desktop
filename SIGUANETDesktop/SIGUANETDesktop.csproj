@@ -482,7 +482,7 @@
     <EmbeddedResource Include="GUI\frmEdicion.resx">
       <DependentUpon>frmEdicion.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="ModeloClienteSOAP\SesionSOAP.cs" />
+    <Compile Include="ModeloClienteSOAP\SoapClient.cs" />
     <Compile Include="ModeloSincronizacion\CmdAvisar.cs" />
     <Compile Include="GUI\controlCmdAvisar.Designer.cs">
       <DependentUpon>controlCmdAvisar.cs</DependentUpon>

@@ -301,17 +301,17 @@ namespace SIGUANETDesktop.ModeloDocumento
 			}
 		}
 		
-		private SesionSOAP _clisoap = new SesionSOAP();
+		private SoapClient _soap = new SoapClient();
 		[XmlElement]
-		public SesionSOAP CliSOAP
+		public SoapClient Soap
 		{
 			get
 			{
-				return _clisoap;
+				return _soap;
 			}
 			set
 			{
-				_clisoap = value;
+				_soap = value;
 			}
 		}
 		

@@ -20,9 +20,9 @@ namespace SIGUANETDesktop.ModeloClienteSOAP
 	/// <summary>
 	/// Description of SesionSOAP.
 	/// </summary>
-	public class SesionSOAP : RootModule
+	public class SoapClient : RootModule
 	{
-		private string _nombre = "SOAP";
+		private string _nombre = "Consultas Web";
 		[XmlAttribute]
 		public string Nombre
 		{
@@ -36,7 +36,7 @@ namespace SIGUANETDesktop.ModeloClienteSOAP
 			}
 		}
 		
-		private string _descripcion = "Servicio Web XML (SOAP)";
+		private string _descripcion = "Acceso al servicio SOAP";
 		[XmlAttribute]
 		public string Descripcion
 		{
@@ -84,7 +84,7 @@ namespace SIGUANETDesktop.ModeloClienteSOAP
 			}
 		}
 		
-		public SesionSOAP()
+		public SoapClient()
 		{
 		}
 		

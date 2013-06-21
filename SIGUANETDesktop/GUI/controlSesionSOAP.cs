@@ -27,7 +27,7 @@ namespace SIGUANETDesktop.GUI
 		
 		private TreeNode _nodo;
 		private bool _usarGrupos;
-		private SesionSOAP _sesion;
+		private SoapClient _sesion;
 		
 		public controlSesionSOAP(TreeNode n, bool usarGrupos)
 		{
@@ -48,7 +48,7 @@ namespace SIGUANETDesktop.GUI
 			tt.SetToolTip(this.txComent , "Presiona 'Esc' para recuperar el comentario inicial");
 			
 			_nodo = n;
-			_sesion = (SesionSOAP) n.Tag;
+			_sesion = (SoapClient) n.Tag;
 			this.txDesc.Text = descInicial = _sesion.Descripcion;
 			this.txComent.Text = docInicial = _sesion.Doc;
 
