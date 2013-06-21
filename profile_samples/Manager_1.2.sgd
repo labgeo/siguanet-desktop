@@ -3,7 +3,7 @@
   <Sincronizacion Enabled="false" Nombre="Sincronización" Descripcion="" Doc="">
     <Operaciones />
   </Sincronizacion>
-  <Explotacion Enabled="true" Nombre="Datos geográficos" Descripcion="Acceso a la base de datos PostgreSQL / PostGIS" Doc="">
+  <Quest Enabled="true" Nombre="Datos geográficos" Descripcion="Acceso a la base de datos PostgreSQL / PostGIS" Doc="">
     <PuntosAcceso>
       <PuntoAcceso Tipo="ArbolEspacial" Nombre="Árbol de Espacios" Descripcion="Vista jerarquizada de la distribución general de los espacios" Doc="">
         <Propiedades>
@@ -1582,7 +1582,7 @@
         </Propiedades>
       </PuntoAcceso>
     </PuntosAcceso>
-  </Explotacion>
+  </Quest>
   <CliSOAP Enabled="true" Nombre="Consultas Web" Descripcion="Acceso al servicio SOAP" Doc="" />
   <CliSQL Enabled="false" Nombre="SQL" Descripcion="" Doc="" />
   <ATools Enabled="false" Nombre="Herramientas administrativas" Descripcion="" Doc="" />
