@@ -764,7 +764,7 @@ namespace SIGUANETDesktop
 						switch((int) nodoActivo.Tag)
 						{
 							case (int) nodosOrdenacion.puntosAcceso:
-								controlOrdenarPuntosAcceso dlgop = new controlOrdenarPuntosAcceso((SesionExplotacion) nodoActivo.Parent.Tag, nodoActivo);
+								controlOrdenarPuntosAcceso dlgop = new controlOrdenarPuntosAcceso((QuestClient) nodoActivo.Parent.Tag, nodoActivo);
 								dlgop.EventoCambiaEstado += CambiarEstadoDocumento;
 								this.MostrarDialogo(dlgop);
 								break;
@@ -1120,7 +1120,7 @@ namespace SIGUANETDesktop
 		private bool ExistePuntoAcceso(tipoPuntoAcceso t)
 		{
 			bool r = false;
-			SesionExplotacion s = (SesionExplotacion) nodoActivo.Parent.Tag;
+			QuestClient s = (QuestClient) nodoActivo.Parent.Tag;
 			foreach (PuntoAcceso p in s.PuntosAcceso)
 			{
 				if (p.Tipo == t) r = true;
@@ -1132,10 +1132,10 @@ namespace SIGUANETDesktop
 		{
 			if (!ExistePuntoAcceso(t))
 			{
-				SesionExplotacion s;
+				QuestClient s;
 				PuntoAcceso p;
 				TreeNode n;
-				s = (SesionExplotacion) nodoActivo.Parent.Tag;
+				s = (QuestClient) nodoActivo.Parent.Tag;
 				p = new PuntoAcceso();
 				p.Tipo = t;
 				s.PuntosAcceso.Add(p);
@@ -1143,7 +1143,7 @@ namespace SIGUANETDesktop
 				nodoActivo.Nodes.Add(n);
 				nodoActivo.Expand();
 				estado = estadoModelo.Pendiente; 
-				controlOrdenarPuntosAcceso dlgop = new controlOrdenarPuntosAcceso((SesionExplotacion) nodoActivo.Parent.Tag, nodoActivo);
+				controlOrdenarPuntosAcceso dlgop = new controlOrdenarPuntosAcceso((QuestClient) nodoActivo.Parent.Tag, nodoActivo);
 				dlgop.EventoCambiaEstado += CambiarEstadoDocumento;
 				this.MostrarDialogo(dlgop);
 			}
@@ -1252,7 +1252,7 @@ namespace SIGUANETDesktop
 		
 		void MitemEliminarPuntoAccesoClick(object sender, EventArgs e)
 		{
-			SesionExplotacion s = (SesionExplotacion) nodoActivo.Parent.Parent.Tag;
+			QuestClient s = (QuestClient) nodoActivo.Parent.Parent.Tag;
 			PuntoAcceso p = (PuntoAcceso) nodoActivo.Tag;
 			s.PuntosAcceso.Remove(p);
 			this.MostrarDialogo(null);

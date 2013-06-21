@@ -21,10 +21,10 @@ namespace SIGUANETDesktop.GUI
 	/// </summary>
 	public partial class controlOrdenarPuntosAcceso
 	{
-		private SesionExplotacion _s;
+		private QuestClient _s;
 		private TreeNode _n;
 		
-		public controlOrdenarPuntosAcceso(SesionExplotacion s, TreeNode n)
+		public controlOrdenarPuntosAcceso(QuestClient s, TreeNode n)
 		{	
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.

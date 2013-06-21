@@ -19,9 +19,9 @@ namespace SIGUANETDesktop.ModeloExplotacion
 	/// <summary>
 	/// Description of SesionExplotacion.
 	/// </summary>
-	public class SesionExplotacion : RootModule
+	public class QuestClient : RootModule
 	{
-		private string _nombre = "Explotación";
+		private string _nombre = "Datos geográficos";
 		[XmlAttribute]
 		public string Nombre
 		{
@@ -35,7 +35,7 @@ namespace SIGUANETDesktop.ModeloExplotacion
 			}
 		}
 		
-		private string _descripcion = "Nueva Sesión de explotación";
+		private string _descripcion = "Acceso a la base de datos PostgreSQL / PostGIS";
 		[XmlAttribute]
 		public string Descripcion
 		{
@@ -77,7 +77,7 @@ namespace SIGUANETDesktop.ModeloExplotacion
 			}
 		}
 		
-		public SesionExplotacion()
+		public QuestClient()
 		{
 			
 		}

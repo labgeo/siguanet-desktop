@@ -25,7 +25,7 @@ namespace SIGUANETDesktop.GUI
 		private readonly string docInicial;
 		
 		private TreeNode _nodo;
-		private SesionExplotacion _sesion;
+		private QuestClient _sesion;
 		
 		public controlSesionExplotacion(TreeNode n)
 		{
@@ -46,7 +46,7 @@ namespace SIGUANETDesktop.GUI
 			tt.SetToolTip(this.txComent , "Presiona 'Esc' para recuperar el comentario inicial");
 			
 			_nodo = n;
-			_sesion = (SesionExplotacion) n.Tag;
+			_sesion = (QuestClient) n.Tag;
 			this.txDesc.Text = descInicial = _sesion.Descripcion;
 			this.txComent.Text = docInicial = _sesion.Doc;			
 		}

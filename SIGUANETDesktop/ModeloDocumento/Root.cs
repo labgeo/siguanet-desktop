@@ -287,17 +287,17 @@ namespace SIGUANETDesktop.ModeloDocumento
 			}
 		}
 		
-		private SesionExplotacion _explotacion = new SesionExplotacion();
+		private QuestClient _quest = new QuestClient();
 		[XmlElement]
-		public SesionExplotacion Explotacion
+		public QuestClient Quest
 		{
 			get
 			{
-				return _explotacion;
+				return _quest;
 			}
 			set
 			{
-				_explotacion = value;
+				_quest = value;
 			}
 		}
 		
