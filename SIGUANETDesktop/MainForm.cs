@@ -323,7 +323,7 @@ namespace SIGUANETDesktop
 			{
 				switch(nodoActivo.Tag.GetType().Name)
 				{
-					case "SesionExplotacion":
+					case "QuestClient":
 						controlSesionExplotacion dlgexp = new controlSesionExplotacion(nodoActivo);
 						dlgexp.EventoCambiaEstado += CambiarEstadoDocumento;
 						this.MostrarDialogo(dlgexp);
@@ -656,7 +656,7 @@ namespace SIGUANETDesktop
 						dlgses.EventoCambiaEstado += CambiarEstadoDocumento;
 						this.MostrarDialogo(dlgses);
 						break;
-					case "SesionSOAP":
+					case "SoapClient":
 						SoapClient sesSOAP = (SoapClient) nodoActivo.Tag;
 						if (sesSOAP.Estado == EstadoSesionSOAP.NoIniciada)
 						{
@@ -1008,7 +1008,7 @@ namespace SIGUANETDesktop
 					e.Node.ForeColor = e.Node.IsSelected ? Color.White : Color.Red;
 					e.Node.ContextMenuStrip = this.mComando;
 					break;
-				case "SesionSOAP":
+				case "SoapClient":
 					e.Node.ForeColor = e.Node.IsSelected ? Color.White : Color.Black;
 					e.Node.ContextMenuStrip = this.mSesionSOAP;
 					break;

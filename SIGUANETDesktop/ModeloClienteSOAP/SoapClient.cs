@@ -18,7 +18,7 @@ using SIGUANETDesktop.ModeloDocumento;
 namespace SIGUANETDesktop.ModeloClienteSOAP
 {
 	/// <summary>
-	/// Description of SesionSOAP.
+	/// Description of SoapClient.
 	/// </summary>
 	public class SoapClient : RootModule
 	{

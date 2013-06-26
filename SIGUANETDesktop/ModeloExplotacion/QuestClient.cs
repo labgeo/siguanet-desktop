@@ -17,7 +17,7 @@ using SIGUANETDesktop.ModeloDocumento;
 namespace SIGUANETDesktop.ModeloExplotacion
 {
 	/// <summary>
-	/// Description of SesionExplotacion.
+	/// Description of QuestClient.
 	/// </summary>
 	public class QuestClient : RootModule
 	{
