@@ -147,5 +147,5 @@
   </Quest>
   <Soap Enabled="true" Nombre="Consultas Web" Descripcion="Acceso al servicio SOAP" Doc="" />
   <Sql Enabled="false" Nombre="Terminal SQL" Descripcion="" Doc="" />
-  <ATools Enabled="false" Nombre="Herramientas administrativas" Descripcion="" Doc="" />
+  <AdminTools Enabled="false" Nombre="Herramientas administrativas" Descripcion="" Doc="" />
 </Root>
