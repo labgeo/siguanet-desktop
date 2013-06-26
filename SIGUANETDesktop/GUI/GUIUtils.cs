@@ -39,11 +39,11 @@ namespace SIGUANETDesktop.GUI
 			n0.Tag = doc;
 			n0.Name = doc.Nombre;
 			n0.Text = doc.Nombre;
-			if (doc.Quest != null && doc.Quest.Enabled) n0.Nodes.Add(CrearNodoSesionExplotacion(doc.Quest));
-			if (doc.DbSync != null && doc.DbSync.Enabled) n0.Nodes.Add(CrearNodoSesionSinc(doc.DbSync));
-			if (doc.Soap != null && doc.Soap.Enabled) n0.Nodes.Add(CrearNodoSesionSOAP(doc.Soap));
-			if (doc.Sql != null && doc.Sql.Enabled) n0.Nodes.Add(CrearNodoSesionSQL(doc.Sql));
-			if (doc.AdminTools != null && doc.AdminTools.Enabled) n0.Nodes.Add(CrearNodoSesionAT(doc.AdminTools));
+			if (doc.Quest != null && doc.Quest.Enabled) n0.Nodes.Add(CrearNodoQuestClient(doc.Quest));
+			if (doc.DbSync != null && doc.DbSync.Enabled) n0.Nodes.Add(CrearNodoDbSyncClient(doc.DbSync));
+			if (doc.Soap != null && doc.Soap.Enabled) n0.Nodes.Add(CrearNodoSoapClient(doc.Soap));
+			if (doc.Sql != null && doc.Sql.Enabled) n0.Nodes.Add(CrearNodoSqlTerminal(doc.Sql));
+			if (doc.AdminTools != null && doc.AdminTools.Enabled) n0.Nodes.Add(CrearNodoAdminToolSet(doc.AdminTools));
 			return n0;
 		}
 
@@ -58,19 +58,19 @@ namespace SIGUANETDesktop.GUI
 			n0.Tag = doc;
 			n0.Name = doc.Nombre;
 			n0.Text = doc.Nombre;
-			if (doc.Quest != null && doc.Quest.Enabled) n0.Nodes.Add(CrearNodoSesionExplotacion(doc.Quest));
-			if (doc.DbSync != null && doc.DbSync.Enabled) n0.Nodes.Add(CrearNodoSesionSinc(doc.DbSync));
-			if (doc.Soap != null && doc.Soap.Enabled) n0.Nodes.Add(CrearNodoSesionSOAP(doc.Soap));
-			if (doc.Sql != null && doc.Sql.Enabled) n0.Nodes.Add(CrearNodoSesionSQL(doc.Sql));
+			if (doc.Quest != null && doc.Quest.Enabled) n0.Nodes.Add(CrearNodoQuestClient(doc.Quest));
+			if (doc.DbSync != null && doc.DbSync.Enabled) n0.Nodes.Add(CrearNodoDbSyncClient(doc.DbSync));
+			if (doc.Soap != null && doc.Soap.Enabled) n0.Nodes.Add(CrearNodoSoapClient(doc.Soap));
+			if (doc.Sql != null && doc.Sql.Enabled) n0.Nodes.Add(CrearNodoSqlTerminal(doc.Sql));
 			if (!forceATools)
 			{
-				if (doc.AdminTools != null && doc.AdminTools.Enabled) n0.Nodes.Add(CrearNodoSesionAT(doc.AdminTools));
+				if (doc.AdminTools != null && doc.AdminTools.Enabled) n0.Nodes.Add(CrearNodoAdminToolSet(doc.AdminTools));
 			}
 			else
 			{
 				if (doc.AdminTools != null)
 				{
-					TreeNode nAT = CrearNodoSesionAT(doc.AdminTools);
+					TreeNode nAT = CrearNodoAdminToolSet(doc.AdminTools);
 					nAT.ToolTipText = "Herramientas administrativas forzadas para perfil Root";
 					n0.Nodes.Add(nAT);
 				}
@@ -79,7 +79,7 @@ namespace SIGUANETDesktop.GUI
 			return n0;
 		}		
 		
-		public static TreeNode CrearNodoSesionExplotacion(QuestClient s)
+		public static TreeNode CrearNodoQuestClient(QuestClient s)
 		{
 			TreeNode n0;
 			TreeNode n00;
@@ -285,7 +285,7 @@ namespace SIGUANETDesktop.GUI
 			return nodes.ToArray();
 		}
 		
-		public static TreeNode CrearNodoSesionSOAP(SoapClient s)
+		public static TreeNode CrearNodoSoapClient(SoapClient s)
 		{
 			TreeNode n0;
 			
@@ -391,7 +391,7 @@ namespace SIGUANETDesktop.GUI
 			return nodes.ToArray();
 		}		
 		
-		public static TreeNode CrearNodoSesionSQL(SqlTerminal s)
+		public static TreeNode CrearNodoSqlTerminal(SqlTerminal s)
 		{
 			TreeNode n0;
 			
@@ -403,7 +403,7 @@ namespace SIGUANETDesktop.GUI
 			return n0;
 		}
 
-		public static TreeNode CrearNodoSesionAT(AdminToolSet s)
+		public static TreeNode CrearNodoAdminToolSet(AdminToolSet s)
 		{
 			TreeNode n0;
 			
@@ -415,7 +415,7 @@ namespace SIGUANETDesktop.GUI
 			return n0;
 		}
 		
-		public static TreeNode CrearNodoSesionSinc(DbSyncClient s)
+		public static TreeNode CrearNodoDbSyncClient(DbSyncClient s)
 		{
 			TreeNode n0;
 			TreeNode n00;
