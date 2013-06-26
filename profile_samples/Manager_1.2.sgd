@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Perfil="Manager" PerfilPersonalizado="" Version="1.2" Caducidad="9000-01-01T00:00:00" Modificado="2008-05-14T09:04:37.96875+02:00" Url="http://127.0.0.1:8082/minserve/Manager_1.2.sgd" Autor="Laboratorio de Geomática - Universidad de Alicante" Nombre="SIGUANETDesktop" Descripcion="Configuración de sesión de SIGUANETDesktop" Doc="">
-  <DbSync Enabled="false" Nombre="Sincronización" Descripcion="" Doc="">
+  <DbSync Enabled="false" Nombre="Sincronización con base de datos externa" Descripcion="" Doc="">
     <Operaciones />
   </DbSync>
   <Quest Enabled="true" Nombre="Datos geográficos" Descripcion="Acceso a la base de datos PostgreSQL / PostGIS" Doc="">
