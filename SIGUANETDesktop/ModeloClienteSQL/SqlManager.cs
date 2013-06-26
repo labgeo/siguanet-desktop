@@ -17,7 +17,7 @@ namespace SIGUANETDesktop.ModeloClienteSQL
 	/// <summary>
 	/// Description of ClienteSQL.
 	/// </summary>
-	public static class ClienteSQL
+	public static class SqlManager
 	{
 		private const string lcomment1 = "--";
 		private const string lcomment2 = "//";

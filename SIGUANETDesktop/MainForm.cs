@@ -702,7 +702,7 @@ namespace SIGUANETDesktop
 						controlClienteSOAP dlgSOAP = new controlClienteSOAP(soap, m);
 						this.MostrarDialogo(dlgSOAP);
 						break;
-					case "SesionSQL":
+					case "SqlTerminal":
 						controlClienteSQL dlgSQL = new controlClienteSQL();
 						this.MostrarDialogo(dlgSQL);
 						break;

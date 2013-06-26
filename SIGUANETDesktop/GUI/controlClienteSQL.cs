@@ -51,12 +51,12 @@ namespace SIGUANETDesktop.GUI
 		
 		void TsbEjecutarClick(object sender, System.EventArgs e)
 		{
-			ClienteSQL.Source = (dbOrigen) Enum.Parse(typeof(dbOrigen), (string) this.tscbOrigen.SelectedItem);
-			List<ClienteSQL.DataTableInfo> infoList = ClienteSQL.Execute(this.txSQL.Text);
-			foreach (ClienteSQL.DataTableInfo info in infoList)
+			SqlManager.Source = (dbOrigen) Enum.Parse(typeof(dbOrigen), (string) this.tscbOrigen.SelectedItem);
+			List<SqlManager.DataTableInfo> infoList = SqlManager.Execute(this.txSQL.Text);
+			foreach (SqlManager.DataTableInfo info in infoList)
 			{
 				TabPage tp;
-				DataTable dt = ClienteSQL.Output.Tables[info.Name];
+				DataTable dt = SqlManager.Output.Tables[info.Name];
 				DataGridView grd = new DataGridView();
 				grd.AllowUserToAddRows = false;
 				grd.ReadOnly = true;
@@ -85,7 +85,7 @@ namespace SIGUANETDesktop.GUI
 			
 			if (tcOutput.TabPages[i].Controls.Count == 0)
 			{
-				this.tsslMsg.Text = "Cliente SQL Unidad de Geomática";
+				this.tsslMsg.Text = "Terminal SQL";
 			}
 			else
 			{
@@ -120,13 +120,13 @@ namespace SIGUANETDesktop.GUI
 			{
 				this.tcOutput.TabPages[i].Controls.Clear();
 				this.tcOutput.TabPages[i].Text = "No hay resultados";
-				this.tsslMsg.Text = "Cliente SQL Unidad de Geomática";
+				this.tsslMsg.Text = "Terminal SQL";
 			}
 			else
 			{
 				this.tcOutput.TabPages.RemoveAt(i);
 			}
-			if (dt != null) ClienteSQL.ClearOutput(dt);
+			if (dt != null) SqlManager.ClearOutput(dt);
 		}
 		
 		void MiBorrarOutputTodosClick(object sender, System.EventArgs e)
@@ -138,8 +138,8 @@ namespace SIGUANETDesktop.GUI
 			}
 			this.tcOutput.TabPages[0].Controls.Clear();
 			this.tcOutput.TabPages[0].Text = "No hay resultados";
-			this.tsslMsg.Text = "Cliente SQL Unidad de Geomática";			
-			ClienteSQL.ClearOutput();
+			this.tsslMsg.Text = "Terminal SQL";			
+			SqlManager.ClearOutput();
 			this.tcOutput.SelectedIndexChanged += new System.EventHandler(this.TcOutputSelectedIndexChanged);
 		}
 		

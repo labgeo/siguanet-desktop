@@ -315,17 +315,17 @@ namespace SIGUANETDesktop.ModeloDocumento
 			}
 		}
 		
-		private SesionSQL _clisql = new SesionSQL();
+		private SqlTerminal _sql = new SqlTerminal();
 		[XmlElement]
-		public SesionSQL CliSQL
+		public SqlTerminal Sql
 		{
 			get
 			{
-				return _clisql;
+				return _sql;
 			}
 			set
 			{
-				_clisql = value;
+				_sql = value;
 			}
 		}
 		

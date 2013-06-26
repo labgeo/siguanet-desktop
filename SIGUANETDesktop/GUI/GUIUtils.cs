@@ -42,7 +42,7 @@ namespace SIGUANETDesktop.GUI
 			if (doc.Quest != null && doc.Quest.Enabled) n0.Nodes.Add(CrearNodoSesionExplotacion(doc.Quest));
 			if (doc.DbSync != null && doc.DbSync.Enabled) n0.Nodes.Add(CrearNodoSesionSinc(doc.DbSync));
 			if (doc.Soap != null && doc.Soap.Enabled) n0.Nodes.Add(CrearNodoSesionSOAP(doc.Soap));
-			if (doc.CliSQL != null && doc.CliSQL.Enabled) n0.Nodes.Add(CrearNodoSesionSQL(doc.CliSQL));
+			if (doc.Sql != null && doc.Sql.Enabled) n0.Nodes.Add(CrearNodoSesionSQL(doc.Sql));
 			if (doc.ATools != null && doc.ATools.Enabled) n0.Nodes.Add(CrearNodoSesionAT(doc.ATools));
 			return n0;
 		}
@@ -61,7 +61,7 @@ namespace SIGUANETDesktop.GUI
 			if (doc.Quest != null && doc.Quest.Enabled) n0.Nodes.Add(CrearNodoSesionExplotacion(doc.Quest));
 			if (doc.DbSync != null && doc.DbSync.Enabled) n0.Nodes.Add(CrearNodoSesionSinc(doc.DbSync));
 			if (doc.Soap != null && doc.Soap.Enabled) n0.Nodes.Add(CrearNodoSesionSOAP(doc.Soap));
-			if (doc.CliSQL != null && doc.CliSQL.Enabled) n0.Nodes.Add(CrearNodoSesionSQL(doc.CliSQL));
+			if (doc.Sql != null && doc.Sql.Enabled) n0.Nodes.Add(CrearNodoSesionSQL(doc.Sql));
 			if (!forceATools)
 			{
 				if (doc.ATools != null && doc.ATools.Enabled) n0.Nodes.Add(CrearNodoSesionAT(doc.ATools));
@@ -391,7 +391,7 @@ namespace SIGUANETDesktop.GUI
 			return nodes.ToArray();
 		}		
 		
-		public static TreeNode CrearNodoSesionSQL(SesionSQL s)
+		public static TreeNode CrearNodoSesionSQL(SqlTerminal s)
 		{
 			TreeNode n0;
 			

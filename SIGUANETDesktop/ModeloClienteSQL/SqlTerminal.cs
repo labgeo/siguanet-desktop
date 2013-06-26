@@ -16,11 +16,11 @@ using SIGUANETDesktop.ModeloDocumento;
 namespace SIGUANETDesktop.ModeloClienteSQL
 {
 	/// <summary>
-	/// Description of SesionSQL.
+	/// Description of SqlTerminal.
 	/// </summary>
-	public class SesionSQL : RootModule
+	public class SqlTerminal : RootModule
 	{
-		private string _nombre = "SQL";
+		private string _nombre = "Terminal SQL";
 		[XmlAttribute]
 		public string Nombre
 		{
@@ -34,7 +34,7 @@ namespace SIGUANETDesktop.ModeloClienteSQL
 			}
 		}
 		
-		private string _descripcion = "Cliente SQL";
+		private string _descripcion = "Entorno de ejecución de sentencias SQL arbitrarias";
 		[XmlAttribute]
 		public string Descripcion
 		{
@@ -62,7 +62,7 @@ namespace SIGUANETDesktop.ModeloClienteSQL
 			}
 		}
 		
-		public SesionSQL()
+		public SqlTerminal()
 		{
 		}
 	}

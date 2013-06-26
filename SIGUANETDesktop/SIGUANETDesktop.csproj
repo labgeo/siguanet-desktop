@@ -491,7 +491,7 @@
     <EmbeddedResource Include="GUI\controlCmdAvisar.resx">
       <DependentUpon>controlCmdAvisar.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="ModeloClienteSQL\ClienteSQL.cs" />
+    <Compile Include="ModeloClienteSQL\SqlManager.cs" />
     <Compile Include="GUI\controlClienteSQL.Designer.cs">
       <DependentUpon>controlClienteSQL.cs</DependentUpon>
     </Compile>
@@ -499,7 +499,7 @@
     <EmbeddedResource Include="GUI\controlClienteSQL.resx">
       <DependentUpon>controlClienteSQL.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="ModeloClienteSQL\SesionSQL.cs" />
+    <Compile Include="ModeloClienteSQL\SqlTerminal.cs" />
     <Compile Include="GUI\controlAutoSincro.Designer.cs">
       <DependentUpon>controlAutoSincro.cs</DependentUpon>
     </Compile>
