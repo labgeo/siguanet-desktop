@@ -128,8 +128,8 @@ namespace SIGUANETDesktop.GUI
 			// tsslMsg
 			// 
 			this.tsslMsg.Name = "tsslMsg";
-			this.tsslMsg.Size = new System.Drawing.Size(174, 17);
-			this.tsslMsg.Text = "Cliente SOAP Unidad de Geomática";
+			this.tsslMsg.Size = new System.Drawing.Size(79, 17);
+			this.tsslMsg.Text = "Consultas Web";
 			// 
 			// splitContainer1
 			// 

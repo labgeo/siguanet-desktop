@@ -154,8 +154,8 @@ namespace SIGUANETDesktop.GUI
 			// tsslMsg
 			// 
 			this.tsslMsg.Name = "tsslMsg";
-			this.tsslMsg.Size = new System.Drawing.Size(99, 17);
-			this.tsslMsg.Text = "Cliente SQL Unidad de Geomática";
+			this.tsslMsg.Size = new System.Drawing.Size(69, 17);
+			this.tsslMsg.Text = "Terminal SQL";
 			// 
 			// splitContainer1
 			// 
@@ -215,7 +215,7 @@ namespace SIGUANETDesktop.GUI
 									this.mitemCerrar,
 									this.mitemCerrarTodos});
 			this.mTab.Name = "mTab";
-			this.mTab.Size = new System.Drawing.Size(216, 70);
+			this.mTab.Size = new System.Drawing.Size(216, 48);
 			// 
 			// mitemCerrar
 			// 

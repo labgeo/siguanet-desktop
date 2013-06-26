@@ -83,7 +83,7 @@ namespace SIGUANETDesktop.GUI
 					ApplicationException ex = this.EnlazarCombo(c.ComboBox, p);
 					if (ex != null)
 					{
-						MessageBox.Show(ex.Message + ex.InnerException.Message, "Error Cliente SOAP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+						MessageBox.Show(ex.Message + ex.InnerException.Message, "Error en la consulta Web", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					}
 					c.Tag = p;
 					c.ToolTipText = p.Comment;
@@ -115,7 +115,7 @@ namespace SIGUANETDesktop.GUI
 		
 		void TsbOKClick(object sender, System.EventArgs e)
 		{
-			this.tsslMsg.Text = "Cliente SOAP";
+			this.tsslMsg.Text = "Consultas Web";
 			try
 			{
 				foreach (ToolStripItem i in this.toolStrip1.Items)
@@ -157,7 +157,7 @@ namespace SIGUANETDesktop.GUI
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, "Error Cliente SOAP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(ex.Message, "Error en la consulta Web", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
 		}
