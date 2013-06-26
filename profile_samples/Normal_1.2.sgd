@@ -145,7 +145,7 @@
       </PuntoAcceso>
     </PuntosAcceso>
   </Quest>
-  <CliSOAP Enabled="true" Nombre="Consultas Web" Descripcion="Acceso al servicio SOAP" Doc="" />
+  <Soap Enabled="true" Nombre="Consultas Web" Descripcion="Acceso al servicio SOAP" Doc="" />
   <CliSQL Enabled="false" Nombre="SQL" Descripcion="" Doc="" />
   <ATools Enabled="false" Nombre="Herramientas administrativas" Descripcion="" Doc="" />
 </Root>
