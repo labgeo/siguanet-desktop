@@ -159,7 +159,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="ModeloAdminTools\SesionAT.cs" />
+    <Compile Include="ModeloAdminTools\AdminToolSet.cs" />
     <Compile Include="ModeloDocumento\DefaultAuthRequest.cs" />
     <Compile Include="ModeloDocumento\DefaultAuthResponse.cs" />
     <Compile Include="ModeloDocumento\DefaultProfileRequest.cs" />

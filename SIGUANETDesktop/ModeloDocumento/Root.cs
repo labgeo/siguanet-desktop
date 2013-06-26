@@ -329,17 +329,17 @@ namespace SIGUANETDesktop.ModeloDocumento
 			}
 		}
 		
-		private SesionAT _atools = new SesionAT();
+		private AdminToolSet _adminTools = new AdminToolSet();
 		[XmlElement]
-		public SesionAT ATools
+		public AdminToolSet AdminTools
 		{
 			get
 			{
-				return _atools;
+				return _adminTools;
 			}
 			set
 			{
-				_atools = value;
+				_adminTools = value;
 			}
 		}
 		

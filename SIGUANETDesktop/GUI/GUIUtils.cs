@@ -43,7 +43,7 @@ namespace SIGUANETDesktop.GUI
 			if (doc.DbSync != null && doc.DbSync.Enabled) n0.Nodes.Add(CrearNodoSesionSinc(doc.DbSync));
 			if (doc.Soap != null && doc.Soap.Enabled) n0.Nodes.Add(CrearNodoSesionSOAP(doc.Soap));
 			if (doc.Sql != null && doc.Sql.Enabled) n0.Nodes.Add(CrearNodoSesionSQL(doc.Sql));
-			if (doc.ATools != null && doc.ATools.Enabled) n0.Nodes.Add(CrearNodoSesionAT(doc.ATools));
+			if (doc.AdminTools != null && doc.AdminTools.Enabled) n0.Nodes.Add(CrearNodoSesionAT(doc.AdminTools));
 			return n0;
 		}
 
@@ -64,13 +64,13 @@ namespace SIGUANETDesktop.GUI
 			if (doc.Sql != null && doc.Sql.Enabled) n0.Nodes.Add(CrearNodoSesionSQL(doc.Sql));
 			if (!forceATools)
 			{
-				if (doc.ATools != null && doc.ATools.Enabled) n0.Nodes.Add(CrearNodoSesionAT(doc.ATools));
+				if (doc.AdminTools != null && doc.AdminTools.Enabled) n0.Nodes.Add(CrearNodoSesionAT(doc.AdminTools));
 			}
 			else
 			{
-				if (doc.ATools != null)
+				if (doc.AdminTools != null)
 				{
-					TreeNode nAT = CrearNodoSesionAT(doc.ATools);
+					TreeNode nAT = CrearNodoSesionAT(doc.AdminTools);
 					nAT.ToolTipText = "Herramientas administrativas forzadas para perfil Root";
 					n0.Nodes.Add(nAT);
 				}
@@ -403,7 +403,7 @@ namespace SIGUANETDesktop.GUI
 			return n0;
 		}
 
-		public static TreeNode CrearNodoSesionAT(SesionAT s)
+		public static TreeNode CrearNodoSesionAT(AdminToolSet s)
 		{
 			TreeNode n0;
 			

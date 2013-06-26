@@ -15,9 +15,9 @@ using SIGUANETDesktop.ModeloDocumento;
 namespace SIGUANETDesktop.ModeloAdminTools
 {
 	/// <summary>
-	/// Description of SesionAT.
+	/// Description of AdminToolSet.
 	/// </summary>
-	public class SesionAT : RootModule
+	public class AdminToolSet : RootModule
 	{	
 		private string _nombre = "Herramientas administrativas";
 		[XmlAttribute]
@@ -61,7 +61,7 @@ namespace SIGUANETDesktop.ModeloAdminTools
 			}
 		}
 		
-		public SesionAT()
+		public AdminToolSet()
 		{
 		}		
 	}

@@ -706,7 +706,7 @@ namespace SIGUANETDesktop
 						controlClienteSQL dlgSQL = new controlClienteSQL();
 						this.MostrarDialogo(dlgSQL);
 						break;
-					case "SesionAT":
+					case "AdminToolSet":
 						controlAdminTools dlgAT = new controlAdminTools((Root) nodoActivo.Parent.Tag);
 						this.MostrarDialogo(dlgAT);
 						break;						
@@ -1012,7 +1012,7 @@ namespace SIGUANETDesktop
 					e.Node.ForeColor = e.Node.IsSelected ? Color.White : Color.Black;
 					e.Node.ContextMenuStrip = this.mSesionSOAP;
 					break;
-				case "SesionAT":
+				case "AdminToolSet":
 					if (Loader.Profile == ProfileType.Root && (e.Node.Parent.Tag as Root).Perfil != ProfileType.Root)
 					{
 						e.Node.ForeColor = e.Node.IsSelected ? Color.White : Color.Red;
