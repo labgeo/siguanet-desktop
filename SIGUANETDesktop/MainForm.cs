@@ -651,7 +651,7 @@ namespace SIGUANETDesktop
 							this.MostrarDialogo(null);
 						}
 						break;
-					case "SesionSinc":
+					case "DbSyncClient":
 						controlSesionSinc dlgses = new controlSesionSinc(nodoActivo);
 						dlgses.EventoCambiaEstado += CambiarEstadoDocumento;
 						this.MostrarDialogo(dlgses);
@@ -910,7 +910,7 @@ namespace SIGUANETDesktop
 								}
 								break;
 							case (int) nodosOrdenacion.operaciones:
-								controlOrdenarOperaciones dlgoo = new controlOrdenarOperaciones((SesionSinc) nodoActivo.Parent.Tag, nodoActivo);
+								controlOrdenarOperaciones dlgoo = new controlOrdenarOperaciones((DbSyncClient) nodoActivo.Parent.Tag, nodoActivo);
 								dlgoo.EventoCambiaEstado += CambiarEstadoDocumento;
 								this.MostrarDialogo(dlgoo);
 								break;
@@ -964,7 +964,7 @@ namespace SIGUANETDesktop
 					e.Node.ForeColor = e.Node.IsSelected ? Color.White : Color.Black;
 					e.Node.ContextMenuStrip = this.mPuntoAcceso;
 					break;
-				case "SesionSinc":
+				case "DbSyncClient":
 					e.Node.ForeColor = e.Node.IsSelected ? Color.White : Color.Black;
 					e.Node.ContextMenuStrip = this.mSesionSincro;
 					break;
@@ -1261,9 +1261,9 @@ namespace SIGUANETDesktop
 		
 		void MitemAutoSincroClick(object sender, System.EventArgs e)
 		{
-			SesionSinc modSinc;
+			DbSyncClient modSinc;
 			Secuenciador autoSinc;
-			modSinc = (SesionSinc) nodoActivo.Tag;
+			modSinc = (DbSyncClient) nodoActivo.Tag;
 			autoSinc = new Secuenciador(modSinc);
 			controlAutoSincro dlgas = new controlAutoSincro(autoSinc);
 			this.MostrarDialogo(dlgas);
@@ -1271,10 +1271,10 @@ namespace SIGUANETDesktop
 		
 		private void MitemNuevaOpClick(object sender, System.EventArgs e)
 		{
-			SesionSinc s;
+			DbSyncClient s;
 			Operacion o;
 			TreeNode n;
-			s = (SesionSinc) nodoActivo.Parent.Tag;
+			s = (DbSyncClient) nodoActivo.Parent.Tag;
 			o = new Operacion();
 			o.Nombre = s.SiguienteNombreOperacion();
 			s.Operaciones.Add(o);
@@ -1282,14 +1282,14 @@ namespace SIGUANETDesktop
 			nodoActivo.Nodes.Add(n);
 			nodoActivo.Expand();
 			estado = estadoModelo.Pendiente; 
-			controlOrdenarOperaciones dlgoo = new controlOrdenarOperaciones((SesionSinc) nodoActivo.Parent.Tag, nodoActivo);
+			controlOrdenarOperaciones dlgoo = new controlOrdenarOperaciones((DbSyncClient) nodoActivo.Parent.Tag, nodoActivo);
 			dlgoo.EventoCambiaEstado += CambiarEstadoDocumento;
 			this.MostrarDialogo(dlgoo);
 		}
 
 		void MitemEliminarOpClick(object sender, System.EventArgs e)
 		{
-			SesionSinc s = (SesionSinc) nodoActivo.Parent.Parent.Tag;
+			DbSyncClient s = (DbSyncClient) nodoActivo.Parent.Parent.Tag;
 			Operacion o = (Operacion) nodoActivo.Tag;
 			s.Operaciones.Remove(o);
 			this.MostrarDialogo(null);

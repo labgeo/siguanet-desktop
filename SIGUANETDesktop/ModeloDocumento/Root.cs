@@ -273,17 +273,17 @@ namespace SIGUANETDesktop.ModeloDocumento
 			}
 		}
 		
-		private SesionSinc _sincronizacion = new SesionSinc();
+		private DbSyncClient _dbSync = new DbSyncClient();
 		[XmlElement]
-		public SesionSinc Sincronizacion
+		public DbSyncClient DbSync
 		{
 			get
 			{
-				return _sincronizacion;
+				return _dbSync;
 			}
 			set
 			{
-				_sincronizacion = value;
+				_dbSync = value;
 			}
 		}
 		

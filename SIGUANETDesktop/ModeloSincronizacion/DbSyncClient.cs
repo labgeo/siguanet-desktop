@@ -19,10 +19,10 @@ namespace SIGUANETDesktop.ModeloSincronizacion
 	/// Clase serializable que define el conjunto de operaciones implicadas
 	/// en una sesión de sincronización entre SIGUANET/PostgreSQL y ORACLE.
 	/// </summary>
-	public class SesionSinc : RootModule
+	public class DbSyncClient : RootModule
 	{
 		
-		private string _nombre = "Sincronización";
+		private string _nombre = "Sincronización con base de datos externa";
 		[XmlAttribute]
 		public string Nombre
 		{
@@ -36,7 +36,7 @@ namespace SIGUANETDesktop.ModeloSincronizacion
 			}
 		}
 		
-		private string _descripcion = "Nueva Sesión de sincronización";
+		private string _descripcion = "Copia incremental de datos externos conforme a reglas predefinidas";
 		[XmlAttribute]
 		public string Descripcion
 		{
@@ -78,7 +78,7 @@ namespace SIGUANETDesktop.ModeloSincronizacion
 			}
 		}
 		
-		public SesionSinc()
+		public DbSyncClient()
 		{
 			
 		}

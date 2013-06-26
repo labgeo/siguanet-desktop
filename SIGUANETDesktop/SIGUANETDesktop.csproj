@@ -169,7 +169,7 @@
     <Compile Include="ModeloDocumento\RemoteSettings.cs" />
     <Compile Include="ModeloDocumento\RootModule.cs" />
     <Compile Include="ModeloExplotacion\Usos\Enums.cs" />
-    <Compile Include="ModeloSincronizacion\SesionSinc.cs" />
+    <Compile Include="ModeloSincronizacion\DbSyncClient.cs" />
     <Compile Include="ModeloSincronizacion\Operacion.cs" />
     <Compile Include="ModeloSincronizacion\PreSincro.cs" />
     <Compile Include="ModeloSincronizacion\Sincro.cs" />

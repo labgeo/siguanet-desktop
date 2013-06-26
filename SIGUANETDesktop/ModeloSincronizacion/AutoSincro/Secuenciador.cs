@@ -55,7 +55,7 @@ namespace SIGUANETDesktop.ModeloSincronizacion.AutoSincro
 	public class Secuenciador
 	{
 
-		private SesionSinc _sinc;
+		private DbSyncClient _sinc;
 		
 		private static List<object> SeqList = new List<object>();
 		private static int SeqStep = -1;
@@ -129,7 +129,7 @@ namespace SIGUANETDesktop.ModeloSincronizacion.AutoSincro
 			set { _responseCmdEditar = value; }
 		}
 		
-		public Secuenciador(SesionSinc sinc)
+		public Secuenciador(DbSyncClient sinc)
 		{
 			this._sinc = sinc;
 			if (SeqList.Count == 0) SeqList = this.BuildSeqList(this._sinc);
@@ -519,7 +519,7 @@ namespace SIGUANETDesktop.ModeloSincronizacion.AutoSincro
 			return r;
 		}
 		
-		private List<object> BuildSeqList(SesionSinc sinc)
+		private List<object> BuildSeqList(DbSyncClient sinc)
 		{
 			List<object> l = new List<object>();
 			//Construimos la secuencia lineal a partir del modelo de sincronización

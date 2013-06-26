@@ -26,7 +26,7 @@ namespace SIGUANETDesktop.GUI
 		private readonly string docInicial;
 		
 		private TreeNode _nodo;
-		private SesionSinc _sesion;
+		private DbSyncClient _sesion;
 		
 		public controlSesionSinc(TreeNode n)
 		{
@@ -47,7 +47,7 @@ namespace SIGUANETDesktop.GUI
 			tt.SetToolTip(this.txComent , "Presiona 'Esc' para recuperar el comentario inicial");
 			
 			_nodo = n;
-			_sesion = (SesionSinc) n.Tag;
+			_sesion = (DbSyncClient) n.Tag;
 			this.txDesc.Text = descInicial = _sesion.Descripcion;
 			this.txComent.Text = docInicial = _sesion.Doc;
 		}

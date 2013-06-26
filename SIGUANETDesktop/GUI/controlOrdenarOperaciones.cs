@@ -23,10 +23,10 @@ namespace SIGUANETDesktop.GUI
 	/// </summary>
 	public partial class controlOrdenarOperaciones
 	{
-		private SesionSinc _s;
+		private DbSyncClient _s;
 		private TreeNode _n;
 
-		public controlOrdenarOperaciones(SesionSinc s, TreeNode n)
+		public controlOrdenarOperaciones(DbSyncClient s, TreeNode n)
 		{
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.
