@@ -410,7 +410,7 @@
     <Compile Include="ModeloExplotacion\Personas\Ubicacion.cs" />
     <Compile Include="ModeloExplotacion\PuntoAcceso.cs" />
     <Compile Include="ModeloExplotacion\PropiedadEscalar.cs" />
-    <Compile Include="ModeloExplotacion\Quest.cs" />
+    <Compile Include="ModeloExplotacion\QuestClient.cs" />
     <Compile Include="ModeloExplotacion\Usos\ActividadSIGUA.cs" />
     <Compile Include="ModeloExplotacion\Usos\GrupoActividad.cs" />
     <Compile Include="ModeloExplotacion\Usos\GrupoCRUE.cs" />
