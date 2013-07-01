@@ -1,7 +1,7 @@
 siguanet-desktop
 ================
 
-SIGUANET desktop application for Windows that provides a set of query, reporting, mapping and administration tools, including a hierarchically organized interface to *siguanet_quest* PostgreSQL extension.
+SIGUANET desktop application for Windows that provides a set of query, reporting, mapping and administration tools, including a hierarchically organized interface to [*siguanet_quest*](https://github.com/labgeo/siguanet_quest) PostgreSQL extension.
 
 ## What's SIGUANET?
 SIGUANET is a free software project that aims to share the University of Alicante's corporate built asset management technology (SIGUA) with the developers community.
