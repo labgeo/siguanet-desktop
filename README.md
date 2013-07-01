@@ -11,7 +11,7 @@ In this sense, SIGUANET will hopefully be useful for other universities and acad
 It's a Winforms .NET application written in C# which provides users with a uniform environment for accessing a SIGUANET geodatabase in an intuitive manner.
 *siguanet-desktop* features:
 * configuration tools for tailoring the user interface for different profiles
-* a [https://github.com/labgeo/siguanet_quest](*siguanet_quest*) PostgreSQL extension client which allows executing spatially aggregated reports using a simple treeview interface
+* a [*siguanet_quest*](https://github.com/labgeo/siguanet_quest) PostgreSQL extension client which allows executing spatially aggregated reports using a simple treeview interface
 * a map viewer offering detail views of *siguanet_quest* query results with predefined PDF map outputs
 * a SOAP client which generates the proxy assembly at run time
 * a rule based bridge and session management interface for regular data transfer from a corporate ORACLE database to the SIGUANET database
